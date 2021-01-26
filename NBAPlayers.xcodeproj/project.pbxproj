@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3A125BF32AE001260D9 /* AppDelegate.swift */; };
 		5C63F3A425BF32AE001260D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */; };
-		5C63F3A625BF32AE001260D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3A525BF32AE001260D9 /* ViewController.swift */; };
 		5C63F3A925BF32AE001260D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C63F3A725BF32AE001260D9 /* Main.storyboard */; };
 		5C63F3AB25BF32B4001260D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C63F3AA25BF32B4001260D9 /* Assets.xcassets */; };
 		5C63F3AE25BF32B4001260D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C63F3AC25BF32B4001260D9 /* LaunchScreen.storyboard */; };
 		5C63F3B925BF32B4001260D9 /* NBAPlayersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3B825BF32B4001260D9 /* NBAPlayersTests.swift */; };
 		5C63F3C425BF32B4001260D9 /* NBAPlayersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3C325BF32B4001260D9 /* NBAPlayersUITests.swift */; };
+		5C63F3E825C06400001260D9 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3E725C063FF001260D9 /* PlayersViewController.swift */; };
+		5C63F3ED25C06A56001260D9 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */; };
+		5C63F3F225C081E7001260D9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F125C081E6001260D9 /* Player.swift */; };
+		5C63F3F725C09537001260D9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F625C09537001260D9 /* Team.swift */; };
+		5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 		5C63F39E25BF32AE001260D9 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C63F3A125BF32AE001260D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C63F3A525BF32AE001260D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C63F3A825BF32AE001260D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C63F3AA25BF32B4001260D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C63F3AD25BF32B4001260D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		5C63F3BF25BF32B4001260D9 /* NBAPlayersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBAPlayersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C63F3C325BF32B4001260D9 /* NBAPlayersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAPlayersUITests.swift; sourceTree = "<group>"; };
 		5C63F3C525BF32B4001260D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C63F3E725C063FF001260D9 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		5C63F3F125C081E6001260D9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5C63F3F625C09537001260D9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +109,12 @@
 			children = (
 				5C63F3A125BF32AE001260D9 /* AppDelegate.swift */,
 				5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */,
-				5C63F3A525BF32AE001260D9 /* ViewController.swift */,
 				5C63F3A725BF32AE001260D9 /* Main.storyboard */,
+				5C63F3E725C063FF001260D9 /* PlayersViewController.swift */,
+				5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */,
+				5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */,
+				5C63F3F125C081E6001260D9 /* Player.swift */,
+				5C63F3F625C09537001260D9 /* Team.swift */,
 				5C63F3AA25BF32B4001260D9 /* Assets.xcassets */,
 				5C63F3AC25BF32B4001260D9 /* LaunchScreen.storyboard */,
 				5C63F3AF25BF32B4001260D9 /* Info.plist */,
@@ -258,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C63F3A625BF32AE001260D9 /* ViewController.swift in Sources */,
+				5C63F3F725C09537001260D9 /* Team.swift in Sources */,
 				5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */,
 				5C63F3A425BF32AE001260D9 /* SceneDelegate.swift in Sources */,
+				5C63F3ED25C06A56001260D9 /* PlayerDetailsViewController.swift in Sources */,
+				5C63F3F225C081E7001260D9 /* Player.swift in Sources */,
+				5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */,
+				5C63F3E825C06400001260D9 /* PlayersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
