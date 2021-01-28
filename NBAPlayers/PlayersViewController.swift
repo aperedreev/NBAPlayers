@@ -8,37 +8,62 @@
 import UIKit
 
 class PlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    let players: [Player] = [
-        Player(
-            firstName: "LeBron",
-            lastName: "James",
-            team: lakers,
-            position: "SF",
-            height: "6'76''"
-        ),
-        Player(
-            firstName: "Anthony",
-            lastName: "Davis",
-            team: lakers,
-            position: "PF",
-            height: "6'10''"
-        ),
-        Player(
-            firstName: "Jimmy",
-            lastName: "Butler",
-            team: heat,
-            position: "SG",
-            height: "6'8''"
-        )
-    ]
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var reloadButton: UIButton!
+    
+    
+    var players: [Player] = []
+    let apiClient: ApiClient = ApiClientImpl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "Players"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+        reloadData()
+    }
+
+    @IBAction func onReloadButtonTap(_ sender: Any) {
+        reloadData()
+    }
+    
+    private func showLoading() {
+        errorLabel.isHidden = true
+        reloadButton.isHidden = true
+        activityIndicatorView.startAnimating()
+    }
+    
+    private func showData() {
+        errorLabel.isHidden = true
+        reloadButton.isHidden = true
+        activityIndicatorView.stopAnimating()
+    }
+    
+    private func showError() {
+        errorLabel.isHidden = false
+        reloadButton.isHidden = false
+        activityIndicatorView.stopAnimating()
+    }
+    
+    private func reloadData() {
+        showLoading()
+        apiClient.getPlayers(completion: {result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let players):
+                    self.players = players
+                    self.showData()
+                case .failure:
+                    self.players = []
+                    self.showError()
+                }
+                self.tableView.reloadData()
+                self.activityIndicatorView.stopAnimating()
+            }
+        })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,7 +80,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
         
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let viewController = storyboard.instantiateViewController(identifier: "PlayerDetailsViewController") as! PlayerDetailsViewController

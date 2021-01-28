@@ -19,6 +19,7 @@
 		5C63F3F225C081E7001260D9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F125C081E6001260D9 /* Player.swift */; };
 		5C63F3F725C09537001260D9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F625C09537001260D9 /* Team.swift */; };
 		5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */; };
+		5C63F40225C19141001260D9 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F40125C19141001260D9 /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		5C63F3F125C081E6001260D9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		5C63F3F625C09537001260D9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
+		5C63F40125C19141001260D9 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */,
 				5C63F3A725BF32AE001260D9 /* Main.storyboard */,
 				5C63F3E725C063FF001260D9 /* PlayersViewController.swift */,
+				5C63F40125C19141001260D9 /* ApiClient.swift */,
 				5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */,
 				5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */,
 				5C63F3F125C081E6001260D9 /* Player.swift */,
@@ -273,6 +276,7 @@
 				5C63F3F725C09537001260D9 /* Team.swift in Sources */,
 				5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */,
 				5C63F3A425BF32AE001260D9 /* SceneDelegate.swift in Sources */,
+				5C63F40225C19141001260D9 /* ApiClient.swift in Sources */,
 				5C63F3ED25C06A56001260D9 /* PlayerDetailsViewController.swift in Sources */,
 				5C63F3F225C081E7001260D9 /* Player.swift in Sources */,
 				5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */,

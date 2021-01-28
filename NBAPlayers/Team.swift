@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Team {
+struct Team: Decodable {
     let city: String
     let name: String
     let conference: String

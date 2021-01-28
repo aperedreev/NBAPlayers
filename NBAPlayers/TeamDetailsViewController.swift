@@ -17,7 +17,7 @@ class TeamDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = team?.fullTeamName
+        navigationItem.title = team?.name
         navigationController?.navigationBar.prefersLargeTitles = true
         cityLabel.text = team?.city
         conferenceLabel.text = team?.conference
