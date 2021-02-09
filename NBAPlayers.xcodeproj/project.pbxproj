@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C58827A25C629F0005392C1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58827925C629F0005392C1 /* Game.swift */; };
+		5C58829B25C84F3B005392C1 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */; };
 		5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3A125BF32AE001260D9 /* AppDelegate.swift */; };
 		5C63F3A425BF32AE001260D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */; };
 		5C63F3A925BF32AE001260D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C63F3A725BF32AE001260D9 /* Main.storyboard */; };
@@ -20,6 +22,7 @@
 		5C63F3F725C09537001260D9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F625C09537001260D9 /* Team.swift */; };
 		5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */; };
 		5C63F40225C19141001260D9 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F40125C19141001260D9 /* ApiClient.swift */; };
+		5CD8489725C32149005B5CC3 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD8489625C32149005B5CC3 /* GamesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C58827925C629F0005392C1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		5C63F39E25BF32AE001260D9 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C63F3A125BF32AE001260D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 		5C63F3F625C09537001260D9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 		5C63F40125C19141001260D9 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		5CD8489625C32149005B5CC3 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C58828925C81B93005392C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C58827925C629F0005392C1 /* Game.swift */,
+				5C63F3F125C081E6001260D9 /* Player.swift */,
+				5C63F3F625C09537001260D9 /* Team.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C58828D25C81DC3005392C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5C58828E25C81E26005392C1 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				5C63F40125C19141001260D9 /* ApiClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		5C58828F25C81E34005392C1 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				5C63F3A125BF32AE001260D9 /* AppDelegate.swift */,
+				5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		5C58829025C81E75005392C1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C63F3E725C063FF001260D9 /* PlayersViewController.swift */,
+				5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */,
+				5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */,
+				5CD8489625C32149005B5CC3 /* GamesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5C58829925C84F17005392C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5C63F39525BF32AE001260D9 = {
 			isa = PBXGroup;
 			children = (
@@ -109,15 +168,13 @@
 		5C63F3A025BF32AE001260D9 /* NBAPlayers */ = {
 			isa = PBXGroup;
 			children = (
-				5C63F3A125BF32AE001260D9 /* AppDelegate.swift */,
-				5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */,
+				5C58828D25C81DC3005392C1 /* Utils */,
+				5C58828F25C81E34005392C1 /* Delegates */,
+				5C58828E25C81E26005392C1 /* Clients */,
+				5C58828925C81B93005392C1 /* Models */,
+				5C58829925C84F17005392C1 /* Views */,
+				5C58829025C81E75005392C1 /* Controllers */,
 				5C63F3A725BF32AE001260D9 /* Main.storyboard */,
-				5C63F3E725C063FF001260D9 /* PlayersViewController.swift */,
-				5C63F40125C19141001260D9 /* ApiClient.swift */,
-				5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */,
-				5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */,
-				5C63F3F125C081E6001260D9 /* Player.swift */,
-				5C63F3F625C09537001260D9 /* Team.swift */,
 				5C63F3AA25BF32B4001260D9 /* Assets.xcassets */,
 				5C63F3AC25BF32B4001260D9 /* LaunchScreen.storyboard */,
 				5C63F3AF25BF32B4001260D9 /* Info.plist */,
@@ -274,9 +331,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C63F3F725C09537001260D9 /* Team.swift in Sources */,
+				5C58827A25C629F0005392C1 /* Game.swift in Sources */,
 				5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */,
 				5C63F3A425BF32AE001260D9 /* SceneDelegate.swift in Sources */,
 				5C63F40225C19141001260D9 /* ApiClient.swift in Sources */,
+				5CD8489725C32149005B5CC3 /* GamesViewController.swift in Sources */,
+				5C58829B25C84F3B005392C1 /* GameTableViewCell.swift in Sources */,
 				5C63F3ED25C06A56001260D9 /* PlayerDetailsViewController.swift in Sources */,
 				5C63F3F225C081E7001260D9 /* Player.swift in Sources */,
 				5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */,
@@ -459,6 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R27KA2D3J8;
 				INFOPLIST_FILE = NBAPlayers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R27KA2D3J8;
 				INFOPLIST_FILE = NBAPlayers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
