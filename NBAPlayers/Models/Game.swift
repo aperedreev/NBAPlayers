@@ -14,8 +14,8 @@ struct Game {
     let homeTeamScore: Int?
     let awayTeamScore: Int?
     let date: String
-    let season: Int
-    let period: Int
+    let season: Int?
+    let period: Int?
     let status: String
 //    let time: String?
     

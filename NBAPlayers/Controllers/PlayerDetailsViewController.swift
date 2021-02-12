@@ -28,13 +28,8 @@ class PlayerDetailsViewController: UIViewController {
  
     @IBAction func onTeamButtonTap(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let viewController = storyboard.instantiateViewController(identifier: "TeamDetailsViewController") as! TeamDetailsViewController
+        showTeamDetailsViewController(from: self, with: player!.team)
         
-        viewController.team = player?.team
-        
-        navigationController?.pushViewController(viewController, animated: true)
-
     }
    
     

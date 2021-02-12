@@ -10,12 +10,12 @@ import UIKit
 class GameTableViewCell: UITableViewCell {
     
     @IBOutlet weak var homeTeamLabel: UILabel!
-    @IBOutlet weak var homeTeamWinPointer: UILabel!
+    @IBOutlet weak var homeTeamWinPointerLabel: UILabel!
     @IBOutlet weak var homeScoreLabel: UILabel!
     @IBOutlet weak var gameDateLabel: UILabel!
     @IBOutlet weak var gameStatusLabel: UILabel!
     @IBOutlet weak var awayTeamLabel: UILabel!
-    @IBOutlet weak var awayTeamWinPointer: UILabel!
+    @IBOutlet weak var awayTeamWinPointerLabel: UILabel!
     @IBOutlet weak var awayScoreLabel: UILabel!
     @IBOutlet weak var gameSeasonLabel: UILabel!
     
@@ -27,16 +27,16 @@ class GameTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func showWinnerScore(_ game: Game){
-        if(game.homeTeamScore ?? 0 > game.awayTeamScore ?? 0){
-            homeTeamWinPointer.isHidden = false
-            awayTeamWinPointer.isHidden = true
-        }else if(game.homeTeamScore ?? 0 < game.awayTeamScore ?? 0){
-            homeTeamWinPointer.isHidden = true
-            awayTeamWinPointer.isHidden = false
-        }else{
-            homeTeamWinPointer.isHidden = true
-            awayTeamWinPointer.isHidden = true
+    func showWinnerScore(_ game: Game) {
+        if (game.homeTeamScore ?? 0 > game.awayTeamScore ?? 0) {
+            homeTeamWinPointerLabel.isHidden = false
+            awayTeamWinPointerLabel.isHidden = true
+        } else if (game.homeTeamScore ?? 0 < game.awayTeamScore ?? 0) {
+            homeTeamWinPointerLabel.isHidden = true
+            awayTeamWinPointerLabel.isHidden = false
+        } else {
+            homeTeamWinPointerLabel.isHidden = true
+            awayTeamWinPointerLabel.isHidden = true
         }
     }
     

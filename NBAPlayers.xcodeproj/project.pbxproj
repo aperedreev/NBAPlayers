@@ -22,6 +22,8 @@
 		5C63F3F725C09537001260D9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F625C09537001260D9 /* Team.swift */; };
 		5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */; };
 		5C63F40225C19141001260D9 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F40125C19141001260D9 /* ApiClient.swift */; };
+		5CC2E4BA25D4006100CA4EF5 /* PushControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2E4B925D4006100CA4EF5 /* PushControllerUtils.swift */; };
+		5CCCCB2A25D2DF24008AB927 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCCB2925D2DF24008AB927 /* GameDetailsViewController.swift */; };
 		5CD8489725C32149005B5CC3 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD8489625C32149005B5CC3 /* GamesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		5C63F3F625C09537001260D9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 		5C63F40125C19141001260D9 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		5CC2E4B925D4006100CA4EF5 /* PushControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushControllerUtils.swift; sourceTree = "<group>"; };
+		5CCCCB2925D2DF24008AB927 /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		5CD8489625C32149005B5CC3 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +109,7 @@
 		5C58828D25C81DC3005392C1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5CC2E4B925D4006100CA4EF5 /* PushControllerUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */,
 				5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */,
 				5CD8489625C32149005B5CC3 /* GamesViewController.swift */,
+				5CCCCB2925D2DF24008AB927 /* GameDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -331,6 +337,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C63F3F725C09537001260D9 /* Team.swift in Sources */,
+				5CC2E4BA25D4006100CA4EF5 /* PushControllerUtils.swift in Sources */,
+				5CCCCB2A25D2DF24008AB927 /* GameDetailsViewController.swift in Sources */,
 				5C58827A25C629F0005392C1 /* Game.swift in Sources */,
 				5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */,
 				5C63F3A425BF32AE001260D9 /* SceneDelegate.swift in Sources */,

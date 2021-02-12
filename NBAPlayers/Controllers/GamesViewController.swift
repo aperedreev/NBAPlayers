@@ -65,7 +65,7 @@ class GamesViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.awayTeamLabel.text = game.awayTeam.name
         cell.awayScoreLabel.text = String(game.awayTeamScore!)
         cell.gameDateLabel.text = game.date
-        cell.gameSeasonLabel.text = "Season: \(game.season)"
+        cell.gameSeasonLabel.text = "Season: \(String(game.season!))"
         cell.gameStatusLabel.text = game.status.uppercased()
         
         cell.showWinnerScore(game)
@@ -74,8 +74,8 @@ class GamesViewController: UIViewController, UITableViewDataSource, UITableViewD
         if hideScoresSwitch.isOn {
             cell.homeScoreLabel.isHidden = true
             cell.awayScoreLabel.isHidden = true
-            cell.homeTeamWinPointer.isHidden = true
-            cell.awayTeamWinPointer.isHidden = true
+            cell.homeTeamWinPointerLabel.isHidden = true
+            cell.awayTeamWinPointerLabel.isHidden = true
         } else {
             cell.homeScoreLabel.isHidden = false
             cell.awayScoreLabel.isHidden = false
@@ -86,6 +86,9 @@ class GamesViewController: UIViewController, UITableViewDataSource, UITableViewD
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        showGameDetailsViewController(from: self, with: games[indexPath.row])
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
