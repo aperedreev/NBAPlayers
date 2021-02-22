@@ -11,6 +11,7 @@ class PlayerDetailsViewController: UIViewController {
 
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var teamButton: UIButton!
     
     var player: Player?
@@ -22,7 +23,9 @@ class PlayerDetailsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         positionLabel.text = player?.position
         heightLabel.text = player?.height
-        teamButton.setTitle(player?.team.fullTeamName, for: .normal)
+        weightLabel.text = player?.weight
+//        teamButton.setTitle(player?.team.fullTeamName, for: .normal)
+        teamButton.setImage(UIImage(named: "\(player?.team.id ?? 00).png"), for: .normal)
     }
     
  

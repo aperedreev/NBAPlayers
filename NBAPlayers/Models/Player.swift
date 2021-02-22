@@ -23,7 +23,17 @@ struct Player: Decodable {
     
     var height: String {
         if let heightFeet = heightFeet, let heightInches = heightInches {
-            return "\(heightFeet)'\(heightInches)''"
+            return "\(heightFeet)'\(heightInches)\""
+        } else {
+            return "Unknown"
+        }
+    }
+    
+    let weightInPounds: Int?
+    
+    var weight: String {
+        if let weightInPounds = weightInPounds {
+            return "\(weightInPounds) lbs"
         } else {
             return "Unknown"
         }
@@ -36,6 +46,7 @@ struct Player: Decodable {
         case team = "team"
         case heightFeet = "height_feet"
         case heightInches = "height_inches"
+        case weightInPounds = "weight_pounds"
     }
     
     var fullName: String {

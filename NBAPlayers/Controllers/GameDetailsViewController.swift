@@ -9,6 +9,8 @@ import UIKit
 
 class GameDetailsViewController: UIViewController {
 
+    @IBOutlet weak var homeTeamLogoImageView: UIImageView!
+    @IBOutlet weak var awayTeamLogoImageView: UIImageView!
     @IBOutlet weak var homeTeamCityLabel: UILabel!
     @IBOutlet weak var homeTeamNameLabel: UILabel!
     @IBOutlet weak var homeTeamConferenceLabel: UILabel!
@@ -35,15 +37,18 @@ class GameDetailsViewController: UIViewController {
 
         navigationItem.title = "Game details"
         navigationController?.navigationBar.prefersLargeTitles = true
-        homeTeamCityLabel.text = "\(game!.homeTeam.city)"
-        homeTeamNameLabel.text = "\(game!.homeTeam.name) (H)"
+        
+        homeTeamLogoImageView.image = UIImage(named: "\(game?.homeTeam.id ?? 00).png")
+        awayTeamLogoImageView.image = UIImage(named: "\(game?.awayTeam.id ?? 00).png")
+        homeTeamCityLabel.text = "\(game?.homeTeam.city ?? "Unknown")"
+        homeTeamNameLabel.text = "\(game?.homeTeam.name ?? "Home Team") (H)"
         homeTeamConferenceLabel.text = game?.homeTeam.conference
-        awayTeamCityLabel.text = "\(game!.awayTeam.city)"
-        awayTeamNameLabel.text = "(A) \(game!.awayTeam.name)"
+        awayTeamCityLabel.text = "\(game?.awayTeam.city ?? "Unknown")"
+        awayTeamNameLabel.text = "(A) \(game?.awayTeam.name ?? "Away Team")"
         awayTeamConferenceLabel.text = game?.awayTeam.conference
         statusTopLabel.text = game?.status.uppercased()
-        homeScoreLabel.text = String(game?.homeTeamScore! ?? 0)
-        awayScoreLabel.text = String(game?.awayTeamScore! ?? 0)
+        homeScoreLabel.text = String(game?.homeTeamScore ?? 0)
+        awayScoreLabel.text = String(game?.awayTeamScore ?? 0)
         dateLabel.text = game?.date
         seasonLabel.text = String(game?.season! ?? 0)
         winScoreLabel.text = "\(max(game?.homeTeamScore ?? 0, game?.awayTeamScore ?? 0))"

@@ -71,12 +71,13 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerTableViewCell
         
         let player = players[indexPath.row]
         
-        cell.textLabel?.text = player.fullName
-        cell.detailTextLabel?.text = player.team.fullTeamName
+        cell.playerNameLabel.text = player.fullName
+        cell.playerTeamLabel.text = "\(player.team.abbreviation)  |  \(player.position)"
+        cell.teamLogoImageView.image = UIImage(named: "\(player.team.id).png")
         
         return cell
     }

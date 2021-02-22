@@ -8,14 +8,14 @@
 import Foundation
 
 struct Team: Decodable {
+    let id: Int
     let city: String
+    let abbreviation: String
     let name: String
     let conference: String
+    let division: String
     
     var fullTeamName: String {
         city + " " + name
     }
 }
-
-let lakers = Team(city: "Los Angeles", name: "Lakers", conference: "West")
-let heat = Team(city: "Miami", name: "Heat", conference: "East")

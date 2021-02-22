@@ -11,74 +11,110 @@ class GamesViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var hideScoresSwitch: UISwitch!
+    @IBOutlet weak var networkErrorLabel: UILabel!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var reloadButton: UIButton!
     
-    var games: [Game] = [
-        Game(
-             homeTeam: lakers,
-             awayTeam: heat,
-             homeTeamScore: 124,
-             awayTeamScore: 167,
-             date: "2019-01-14",
-             season: 2019,
-             period: 4,
-             status: "Final"),
-        Game(
-             homeTeam: heat,
-             awayTeam: lakers,
-             homeTeamScore: 113,
-             awayTeamScore: 135,
-             date: "2019-01-24",
-             season: 2019,
-             period: 3,
-             status: "Final"),
-        Game(
-             homeTeam: lakers,
-             awayTeam: heat,
-             homeTeamScore: 154,
-             awayTeamScore: 139,
-             date: "2019-01-31",
-             season: 2019,
-             period: 6,
-             status: "Final")
+    var games: [Game] = []
+    let apiClient: ApiClient = ApiClientImpl()
     
-    ]
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Games"
+        
+        reloadData()
+    }
+    
+    @IBAction func onReloadButtonTap(_ sender: Any) {
+        reloadData()
+    }
+    
+    private func showLoading() {
+        networkErrorLabel.isHidden = true
+        reloadButton.isHidden = true
+        activityIndicatorView.startAnimating()
+    }
+    
+    private func showData() {
+        networkErrorLabel.isHidden = true
+        reloadButton.isHidden = true
+        activityIndicatorView.stopAnimating()
+    }
+    
+    private func showError() {
+        networkErrorLabel.isHidden = false
+        reloadButton.isHidden = false
+        activityIndicatorView.stopAnimating()
+    }
+    
+    private func reloadData() {
+        showLoading()
+        apiClient.getGames(completion: {result in
+            DispatchQueue.main.async {
+                switch result {
+                    case .success(let games):
+                        self.games = games.reversed()
+                        self.showData()
+                    case .failure:
+                        self.games = []
+                        self.showError()
+                }
+                self.tableView.reloadData()
+            }
+        })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return games.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 5
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath) as! GameTableViewCell
         
-        let game = games[indexPath.row]
+        let game = games[indexPath.section]
         
+        cell.homeTeamLogoImageView.image = UIImage(named: "\(game.homeTeam.id).png")
+        cell.awayTeamLogoImageView.image = UIImage(named: "\(game.awayTeam.id).png")
         cell.homeTeamLabel.text = game.homeTeam.name
         cell.homeScoreLabel.text = String(game.homeTeamScore!)
         cell.awayTeamLabel.text = game.awayTeam.name
         cell.awayScoreLabel.text = String(game.awayTeamScore!)
         cell.gameDateLabel.text = game.date
-        cell.gameSeasonLabel.text = "Season: \(String(game.season!))"
         cell.gameStatusLabel.text = game.status.uppercased()
+        if game.homeTeamScore == 0 && game.awayTeamScore == 0 {
+            cell.homeScoreLabel.text = "-"
+            cell.awayScoreLabel.text = "-"
+        }
         
         cell.showWinnerScore(game)
         cell.game = game
         
         if hideScoresSwitch.isOn {
-            cell.homeScoreLabel.isHidden = true
-            cell.awayScoreLabel.isHidden = true
+            cell.homeScoreLabel.text = "-"
+            cell.awayScoreLabel.text = "-"
             cell.homeTeamWinPointerLabel.isHidden = true
             cell.awayTeamWinPointerLabel.isHidden = true
-        } else {
-            cell.homeScoreLabel.isHidden = false
-            cell.awayScoreLabel.isHidden = false
         }
         
         return cell
@@ -86,26 +122,13 @@ class GamesViewController: UIViewController, UITableViewDataSource, UITableViewD
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        showGameDetailsViewController(from: self, with: games[indexPath.row])
+        showGameDetailsViewController(from: self, with: games[indexPath.section])
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
-//            navigationController?.setNavigationBarHidden(true, animated: true)
-            hideScoresSwitch.isHidden = true
-
-        } else {
-//            navigationController?.setNavigationBarHidden(false, animated: true)
-            hideScoresSwitch.isHidden = false
-        }
-    }
-    
-    @IBAction func hideScoresOn(_ sender: Any) {
-        
+    @IBAction func OnHideScoresSwitchTap(_ sender: Any) {
         tableView.reloadData()
-        
     }
     
 }

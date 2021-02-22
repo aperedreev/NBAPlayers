@@ -9,15 +9,16 @@ import UIKit
 
 class GameTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var homeTeamLogoImageView: UIImageView!
     @IBOutlet weak var homeTeamLabel: UILabel!
     @IBOutlet weak var homeTeamWinPointerLabel: UILabel!
     @IBOutlet weak var homeScoreLabel: UILabel!
     @IBOutlet weak var gameDateLabel: UILabel!
     @IBOutlet weak var gameStatusLabel: UILabel!
+    @IBOutlet weak var awayTeamLogoImageView: UIImageView!
     @IBOutlet weak var awayTeamLabel: UILabel!
     @IBOutlet weak var awayTeamWinPointerLabel: UILabel!
     @IBOutlet weak var awayScoreLabel: UILabel!
-    @IBOutlet weak var gameSeasonLabel: UILabel!
     
     var game: Game?
     
@@ -25,8 +26,17 @@ class GameTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
-
+    
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//
+//    
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0))
+//        
+//    }
+    
     func showWinnerScore(_ game: Game) {
         if (game.homeTeamScore ?? 0 > game.awayTeamScore ?? 0) {
             homeTeamWinPointerLabel.isHidden = false

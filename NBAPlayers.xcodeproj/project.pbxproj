@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0A1F3125DB2D25000AAA25 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */; };
 		5C58827A25C629F0005392C1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58827925C629F0005392C1 /* Game.swift */; };
 		5C58829B25C84F3B005392C1 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */; };
 		5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3A125BF32AE001260D9 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		5C58827925C629F0005392C1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		5C63F39E25BF32AE001260D9 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,9 +101,9 @@
 		5C58828925C81B93005392C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5C58827925C629F0005392C1 /* Game.swift */,
 				5C63F3F125C081E6001260D9 /* Player.swift */,
 				5C63F3F625C09537001260D9 /* Team.swift */,
+				5C58827925C629F0005392C1 /* Game.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */,
+				5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C0A1F3125DB2D25000AAA25 /* PlayerTableViewCell.swift in Sources */,
 				5C63F3F725C09537001260D9 /* Team.swift in Sources */,
 				5CC2E4BA25D4006100CA4EF5 /* PushControllerUtils.swift in Sources */,
 				5CCCCB2A25D2DF24008AB927 /* GameDetailsViewController.swift in Sources */,
@@ -454,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -509,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -527,7 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R27KA2D3J8;
 				INFOPLIST_FILE = NBAPlayers/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,7 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R27KA2D3J8;
 				INFOPLIST_FILE = NBAPlayers/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
