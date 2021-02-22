@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct TeamsResponse: Decodable {
+    let data: [Team]
+}
+
 struct Team: Decodable {
     let id: Int
     let city: String
@@ -18,4 +22,13 @@ struct Team: Decodable {
     var fullTeamName: String {
         city + " " + name
     }
+}
+
+enum CodingKeys: String, CodingKey {
+    case id = "id"
+    case city = "city"
+    case abbreviation = "abbreviation"
+    case name = "name"
+    case conference = "conference"
+    case division = "division"
 }

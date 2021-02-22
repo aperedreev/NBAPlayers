@@ -13,6 +13,9 @@ enum ApiError: Error {
 
 protocol ApiClient {
     func getPlayers(completion: @escaping (Result<[Player], Error>) -> ())
+    
+    func getTeams(completion: @escaping (Result<[Team], Error>) -> ())
+    
     func getGames(completion: @escaping (Result<[Game], Error>) -> ())
 }
 
@@ -37,6 +40,36 @@ class ApiClientImpl: ApiClient {
             do {
                 let decoder = JSONDecoder()
                 let response = try decoder.decode(PlayersResponse.self, from: data)
+                completion(.success(response.data))
+            } catch(let error) {
+                print(error)
+                completion(.failure(error))
+            }
+        })
+        
+        dataTask.resume()
+    }
+    
+    func getTeams(completion: @escaping (Result<[Team], Error>) -> ()) {
+        let session = URLSession.shared
+        
+        let url = URL(string: "https://www.balldontlie.io/api/v1/teams")!
+        let urlRequest = URLRequest(url: url)
+        let dataTask = session.dataTask(with: urlRequest, completionHandler: { data, response, error in
+            
+            // LOADING AND ERROR TESTING
+//                        sleep(5)
+//                        completion(.failure(ApiError.noData))
+//                        return
+            
+            guard let data = data else {
+                completion(.failure(ApiError.noData))
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let response = try decoder.decode(TeamsResponse.self, from: data)
                 completion(.success(response.data))
             } catch(let error) {
                 print(error)
