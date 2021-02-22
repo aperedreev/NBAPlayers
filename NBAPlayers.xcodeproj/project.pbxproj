@@ -10,6 +10,7 @@
 		5C0A1F3125DB2D25000AAA25 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */; };
 		5C58827A25C629F0005392C1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58827925C629F0005392C1 /* Game.swift */; };
 		5C58829B25C84F3B005392C1 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */; };
+		5C61813425E439E400D34F92 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61813325E439E400D34F92 /* TeamsViewController.swift */; };
 		5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3A125BF32AE001260D9 /* AppDelegate.swift */; };
 		5C63F3A425BF32AE001260D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */; };
 		5C63F3A925BF32AE001260D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C63F3A725BF32AE001260D9 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		5C58827925C629F0005392C1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		5C61813325E439E400D34F92 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		5C63F39E25BF32AE001260D9 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C63F3A125BF32AE001260D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				5C63F3E725C063FF001260D9 /* PlayersViewController.swift */,
 				5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */,
+				5C61813325E439E400D34F92 /* TeamsViewController.swift */,
 				5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */,
 				5CD8489625C32149005B5CC3 /* GamesViewController.swift */,
 				5CCCCB2925D2DF24008AB927 /* GameDetailsViewController.swift */,
@@ -352,6 +355,7 @@
 				5C63F3ED25C06A56001260D9 /* PlayerDetailsViewController.swift in Sources */,
 				5C63F3F225C081E7001260D9 /* Player.swift in Sources */,
 				5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */,
+				5C61813425E439E400D34F92 /* TeamsViewController.swift in Sources */,
 				5C63F3E825C06400001260D9 /* PlayersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
