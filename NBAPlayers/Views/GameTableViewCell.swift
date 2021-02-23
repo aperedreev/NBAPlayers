@@ -9,6 +9,7 @@ import UIKit
 
 class GameTableViewCell: UITableViewCell {
     
+    //MARK: - Properties
     @IBOutlet weak var homeTeamLogoImageView: UIImageView!
     @IBOutlet weak var homeTeamLabel: UILabel!
     @IBOutlet weak var homeTeamWinPointerLabel: UILabel!
@@ -22,21 +23,7 @@ class GameTableViewCell: UITableViewCell {
     
     var game: Game?
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
-    }
-    
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//    
-//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0))
-//        
-//    }
-    
+    //MARK: - Methods
     func showWinnerScore(_ game: Game) {
         if (game.homeTeamScore ?? 0 > game.awayTeamScore ?? 0) {
             homeTeamWinPointerLabel.isHidden = false
@@ -50,10 +37,23 @@ class GameTableViewCell: UITableViewCell {
         }
     }
     
+    //MARK: - Overrides
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0))
+        
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }

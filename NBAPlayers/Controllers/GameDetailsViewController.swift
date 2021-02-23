@@ -9,6 +9,7 @@ import UIKit
 
 class GameDetailsViewController: UIViewController {
 
+    //MARK: - Properties
     @IBOutlet weak var homeTeamLogoImageView: UIImageView!
     @IBOutlet weak var awayTeamLogoImageView: UIImageView!
     @IBOutlet weak var homeTeamCityLabel: UILabel!
@@ -31,15 +32,28 @@ class GameDetailsViewController: UIViewController {
     @IBOutlet weak var awayTeamDetailsButton: UIButton!
     
     var game: Game?
+
+    //MARK: - Methods
+    @IBAction func onHomeTeamDetailsButtonTap(_ sender: Any) {
     
+        showTeamDetailsViewController(from: self, with: game!.homeTeam)
+    }
+    
+    @IBAction func onAwayTeamDetailsButtonTap(_ sender: Any) {
+    
+        showTeamDetailsViewController(from: self, with: game!.awayTeam)
+        
+    }
+    
+    //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "Game details"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        homeTeamLogoImageView.image = UIImage(named: "\(game?.homeTeam.id ?? 00).png")
-        awayTeamLogoImageView.image = UIImage(named: "\(game?.awayTeam.id ?? 00).png")
+        homeTeamLogoImageView.image = UIImage(named: "\(game?.homeTeam.id ?? 00)")
+        awayTeamLogoImageView.image = UIImage(named: "\(game?.awayTeam.id ?? 00)")
         homeTeamCityLabel.text = "\(game?.homeTeam.city ?? "Unknown")"
         homeTeamNameLabel.text = "\(game?.homeTeam.name ?? "Home Team") (H)"
         homeTeamConferenceLabel.text = game?.homeTeam.conference
@@ -67,22 +81,11 @@ class GameDetailsViewController: UIViewController {
                 awayWinPointerLabel.isHidden = true
             }
         }
-         
+        
         showWinnerScore()
         
-        
     }
     
-    @IBAction func onHomeTeamDetailsButtonTap(_ sender: Any) {
-    
-        showTeamDetailsViewController(from: self, with: game!.homeTeam)
-    }
-    
-    @IBAction func onAwayTeamDetailsButtonTap(_ sender: Any) {
-    
-        showTeamDetailsViewController(from: self, with: game!.awayTeam)
-        
-    }
-    
-
 }
+
+//MARK: - Extensions

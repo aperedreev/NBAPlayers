@@ -7,8 +7,9 @@
 
 import UIKit
 
-class GamesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class GamesViewController: UIViewController {
 
+    //MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var hideScoresSwitch: UISwitch!
     @IBOutlet weak var networkErrorLabel: UILabel!
@@ -18,15 +19,7 @@ class GamesViewController: UIViewController, UITableViewDataSource, UITableViewD
     var games: [Game] = []
     let apiClient: ApiClient = ApiClientImpl()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Games"
-        
-        reloadData()
-    }
-    
+    //MARK: - Methods
     @IBAction func onReloadButtonTap(_ sender: Any) {
         reloadData()
     }
@@ -66,11 +59,24 @@ class GamesViewController: UIViewController, UITableViewDataSource, UITableViewD
         })
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-        
+    @IBAction func OnHideScoresSwitchTap(_ sender: Any) {
+        tableView.reloadData()
     }
     
+    //MARK: - Overrides
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Games"
+        
+        reloadData()
+    }
+    
+}
+
+//MARK: - Extensions
+extension GamesViewController: UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return games.count
     }
@@ -88,14 +94,22 @@ class GamesViewController: UIViewController, UITableViewDataSource, UITableViewD
         return 120
     }
     
+}
+
+extension GamesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+        
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath) as! GameTableViewCell
         
         let game = games[indexPath.section]
         
-        cell.homeTeamLogoImageView.image = UIImage(named: "\(game.homeTeam.id).png")
-        cell.awayTeamLogoImageView.image = UIImage(named: "\(game.awayTeam.id).png")
+        cell.homeTeamLogoImageView.image = UIImage(named: "\(game.homeTeam.id)")
+        cell.awayTeamLogoImageView.image = UIImage(named: "\(game.awayTeam.id)")
         cell.homeTeamLabel.text = game.homeTeam.name
         cell.homeScoreLabel.text = String(game.homeTeamScore!)
         cell.awayTeamLabel.text = game.awayTeam.name
@@ -125,10 +139,6 @@ class GamesViewController: UIViewController, UITableViewDataSource, UITableViewD
         showGameDetailsViewController(from: self, with: games[indexPath.section])
         
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    @IBAction func OnHideScoresSwitchTap(_ sender: Any) {
-        tableView.reloadData()
     }
     
 }

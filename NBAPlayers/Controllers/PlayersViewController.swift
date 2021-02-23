@@ -7,25 +7,18 @@
 
 import UIKit
 
-class PlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PlayersViewController: UIViewController {
     
+    // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var reloadButton: UIButton!
     
-    
     var players: [Player] = []
     let apiClient: ApiClient = ApiClientImpl()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        navigationItem.title = "Players"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        reloadData()
-    }
-
+    // MARK: - Methods
     @IBAction func onReloadButtonTap(_ sender: Any) {
         reloadData()
     }
@@ -65,10 +58,29 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         })
     }
-    
+
+    // MARK: - Overrides
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        navigationItem.title = "Players"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        reloadData()
+    }
+}
+
+// MARK: - Extensions
+extension PlayersViewController: UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+}
+
+extension PlayersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerTableViewCell
@@ -76,8 +88,8 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
         let player = players[indexPath.row]
         
         cell.playerNameLabel.text = player.fullName
-        cell.playerTeamLabel.text = "\(player.team.abbreviation)  |  \(player.position)"
-        cell.teamLogoImageView.image = UIImage(named: "\(player.team.id).png")
+        cell.playerTeamLabel.text = "\(player.team.abbreviation) ｜ \(player.position)"
+        cell.teamLogoImageView.image = UIImage(named: "\(player.team.id)")
         
         return cell
     }
@@ -88,5 +100,4 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
 }

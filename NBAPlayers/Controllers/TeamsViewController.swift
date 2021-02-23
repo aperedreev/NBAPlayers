@@ -7,22 +7,16 @@
 
 import UIKit
 
-class TeamsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class TeamsViewController: UIViewController {
     
+    //MARK: - Properties
     @IBOutlet weak var collectionView: UICollectionView!
     
     var teams: [Team] = []
     var team: Team?
     let apiClient: ApiClient = ApiClientImpl()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        navigationItem.title = "Teams"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
-        reloadData()
-    }
+    
+    //MARK: - Methods
     
     private func reloadData() {
 //        showLoading()
@@ -41,6 +35,24 @@ class TeamsViewController: UIViewController, UICollectionViewDataSource, UIColle
         })
     }
     
+    //MARK: - Overrides
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        navigationItem.title = "Teams"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        reloadData()
+    }
+    
+}
+
+//MARK: - Extensions
+extension TeamsViewController: UICollectionViewDelegate {
+    
+}
+
+extension TeamsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         teams.count
     }
@@ -50,7 +62,7 @@ class TeamsViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         let team = teams[indexPath.item]
         
-        cell.teamLogoImageView.image = UIImage(named: "\(team.id).png")
+        cell.teamLogoImageView.image = UIImage(named: "\(team.id)")
         
         cell.team = team
         

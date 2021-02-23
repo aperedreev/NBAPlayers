@@ -9,6 +9,7 @@ import UIKit
 
 class TeamDetailsViewController: UIViewController {
 
+    //MARK: - Properties
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var conferenceLabel: UILabel!
     @IBOutlet weak var divisionLabel: UILabel!
@@ -16,13 +17,14 @@ class TeamDetailsViewController: UIViewController {
     
     var team: Team?
     
+    //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = team?.name
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        teamLogoImageView.image = UIImage(named: "\(team?.id ?? 1).png")
+        teamLogoImageView.image = UIImage(named: "\(team?.id ?? 1)")
         cityLabel.text = team?.city
         conferenceLabel.text = team?.conference
         divisionLabel.text = team?.division
