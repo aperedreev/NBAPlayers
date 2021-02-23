@@ -645,9 +645,10 @@
                     <tabBarItem key="tabBarItem" title="Teams" id="WHn-Ph-iAc">
                         <imageReference key="image" image="person.3" catalog="system" symbolScale="large"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oRd-lB-gaW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="oRd-lB-gaW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemOrangeColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="dIx-mZ-YKz" kind="relationship" relationship="rootViewController" id="CPg-z5-pyt"/>
