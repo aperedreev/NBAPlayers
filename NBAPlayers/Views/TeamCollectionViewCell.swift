@@ -9,12 +9,13 @@ import UIKit
 
 class TeamCollectionViewCell: UICollectionViewCell {
     
-    //MARK: - Properties
-    @IBOutlet weak var teamLogoImageView: UIImageView!
-    
+    // MARK: - Properties
     var team: Team?
     
-    //MARK: - Overrides
+    // MARK: - IBOutlets
+    @IBOutlet weak var teamLogoImageView: UIImageView!
+    
+    // MARK: - Overrides
     override func layoutSubviews() {
         super.layoutSubviews()
         

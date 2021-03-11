@@ -16,9 +16,8 @@ struct Team: Decodable {
     let city: String
     let abbreviation: String
     let name: String
-    let conference: String
+    let conference: String 
     let division: String
-    
     var fullTeamName: String {
         city + " " + name
     }
@@ -29,6 +28,6 @@ enum CodingKeys: String, CodingKey {
     case city = "city"
     case abbreviation = "abbreviation"
     case name = "name"
-    case conference = "conference"
+    case conference
     case division = "division"
 }

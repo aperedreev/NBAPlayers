@@ -9,12 +9,14 @@ import UIKit
 
 class PlayerTableViewCell: UITableViewCell {
     
-    //MARK: - Properties
+    // MARK: - Properties
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var playerTeamLabel: UILabel!
     @IBOutlet weak var teamLogoImageView: UIImageView!
     
-    //MARK: - Overrides
+    // MARK: - Overrides
     override func awakeFromNib() {
         super.awakeFromNib()
         

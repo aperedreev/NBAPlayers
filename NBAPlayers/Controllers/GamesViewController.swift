@@ -9,21 +9,18 @@ import UIKit
 
 class GamesViewController: UIViewController {
 
-    //MARK: - Properties
+    // MARK: - Properties
+    var games: [Game] = []
+    let apiClient: ApiClient = ApiClientImpl()
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var hideScoresSwitch: UISwitch!
     @IBOutlet weak var networkErrorLabel: UILabel!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var reloadButton: UIButton!
     
-    var games: [Game] = []
-    let apiClient: ApiClient = ApiClientImpl()
-    
-    //MARK: - Methods
-    @IBAction func onReloadButtonTap(_ sender: Any) {
-        reloadData()
-    }
-    
+    // MARK: - Methods
     private func showLoading() {
         networkErrorLabel.isHidden = true
         reloadButton.isHidden = true
@@ -48,7 +45,7 @@ class GamesViewController: UIViewController {
             DispatchQueue.main.async {
                 switch result {
                     case .success(let games):
-                        self.games = games.reversed()
+                        self.games = games
                         self.showData()
                     case .failure:
                         self.games = []
@@ -59,11 +56,16 @@ class GamesViewController: UIViewController {
         })
     }
     
-    @IBAction func OnHideScoresSwitchTap(_ sender: Any) {
+    // MARK: - IBActions
+    @IBAction func reloadButtonTapped(_ sender: Any) {
+        reloadData()
+    }
+    
+    @IBAction func hideScoresSwitchTapped(_ sender: Any) {
         tableView.reloadData()
     }
     
-    //MARK: - Overrides
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -75,11 +77,8 @@ class GamesViewController: UIViewController {
     
 }
 
-//MARK: - Extensions
+// MARK: - Extensions
 extension GamesViewController: UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return games.count
-    }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 5
@@ -89,14 +88,25 @@ extension GamesViewController: UITableViewDelegate {
         return 5
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        showGameDetailsViewController(from: self, with: games[indexPath.section])
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
 
 extension GamesViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return games.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
         
@@ -134,11 +144,6 @@ extension GamesViewController: UITableViewDataSource {
         return cell
     }
    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        showGameDetailsViewController(from: self, with: games[indexPath.section])
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+    
     
 }

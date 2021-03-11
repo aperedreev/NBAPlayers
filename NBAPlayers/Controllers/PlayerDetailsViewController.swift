@@ -9,22 +9,25 @@ import UIKit
 
 class PlayerDetailsViewController: UIViewController {
 
-    //MARK: - Properties
+    // MARK: - Properties
+    var player: Player?
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var teamButton: UIButton!
     
-    var player: Player?
+    // MARK: - Methods
     
-    //MARK: - Methods
-    @IBAction func onTeamButtonTap(_ sender: Any) {
-        
+    
+    // MARK: - IBActions
+    @IBAction func teamButtonTapped(_ sender: Any) {
         showTeamDetailsViewController(from: self, with: player!.team)
         
     }
    
-    //MARK: - Override
+    // MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
 

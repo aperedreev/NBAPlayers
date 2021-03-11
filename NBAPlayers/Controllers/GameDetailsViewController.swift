@@ -10,6 +10,9 @@ import UIKit
 class GameDetailsViewController: UIViewController {
 
     //MARK: - Properties
+    var game: Game?
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var homeTeamLogoImageView: UIImageView!
     @IBOutlet weak var awayTeamLogoImageView: UIImageView!
     @IBOutlet weak var homeTeamCityLabel: UILabel!
@@ -30,16 +33,17 @@ class GameDetailsViewController: UIViewController {
     @IBOutlet weak var statusInListLabel: UILabel!
     @IBOutlet weak var homeTeamDetailsButton: UIButton!
     @IBOutlet weak var awayTeamDetailsButton: UIButton!
-    
-    var game: Game?
 
     //MARK: - Methods
-    @IBAction func onHomeTeamDetailsButtonTap(_ sender: Any) {
+    
+    
+    // MARK: - IBActions
+    @IBAction func homeTeamDetailsButtonTapped(_ sender: Any) {
     
         showTeamDetailsViewController(from: self, with: game!.homeTeam)
     }
     
-    @IBAction func onAwayTeamDetailsButtonTap(_ sender: Any) {
+    @IBAction func awayTeamDetailsButtonTapped(_ sender: Any) {
     
         showTeamDetailsViewController(from: self, with: game!.awayTeam)
         
@@ -88,4 +92,4 @@ class GameDetailsViewController: UIViewController {
     
 }
 
-//MARK: - Extensions
+// MARK: - Extensions

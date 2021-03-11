@@ -10,19 +10,16 @@ import UIKit
 class PlayersViewController: UIViewController {
     
     // MARK: - Properties
+    var players: [Player] = []
+    let apiClient: ApiClient = ApiClientImpl()
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var reloadButton: UIButton!
     
-    var players: [Player] = []
-    let apiClient: ApiClient = ApiClientImpl()
-
     // MARK: - Methods
-    @IBAction func onReloadButtonTap(_ sender: Any) {
-        reloadData()
-    }
-    
     private func showLoading() {
         errorLabel.isHidden = true
         reloadButton.isHidden = true
@@ -47,7 +44,7 @@ class PlayersViewController: UIViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let players):
-                    self.players = players
+                    self.players = players.reversed()
                     self.showData()
                 case .failure:
                     self.players = []
@@ -57,6 +54,11 @@ class PlayersViewController: UIViewController {
                 self.activityIndicatorView.stopAnimating()
             }
         })
+    }
+    
+    // MARK: - IBActions
+    @IBAction func reloadButtonTapped(_ sender: Any) {
+        reloadData()
     }
 
     // MARK: - Overrides
@@ -71,12 +73,22 @@ class PlayersViewController: UIViewController {
 
 // MARK: - Extensions
 extension PlayersViewController: UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        showPlayerDetailsViewController(from: self, with: players[indexPath.row])
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
+    
 }
 
 extension PlayersViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
     }
@@ -93,11 +105,5 @@ extension PlayersViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        showPlayerDetailsViewController(from: self, with: players[indexPath.row])
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+
 }

@@ -40,12 +40,12 @@ struct Player: Decodable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case firstName = "first_name"
-        case lastName = "last_name"
-        case position = "position"
-        case team = "team"
-        case heightFeet = "height_feet"
-        case heightInches = "height_inches"
+        case firstName      = "first_name"
+        case lastName       = "last_name"
+        case position       
+        case team           
+        case heightFeet     = "height_feet"
+        case heightInches   = "height_inches"
         case weightInPounds = "weight_pounds"
     }
     

@@ -17,25 +17,25 @@ struct Game: Decodable {
 
     let homeTeamScore: Int?
     let awayTeamScore: Int?
-    let dateGet: String
-    var date: String {
+    let dateGet:       String
+    var date:          String {
         String(dateGet.split(separator: "T")[0])
     }
     let season: Int?
     let period: Int?
     let status: String
-//    let time: String?
+    let time:   String?
     
     enum CodingKeys: String, CodingKey {
-        case homeTeam = "home_team"
-        case awayTeam = "visitor_team"
+        case homeTeam      = "home_team"
+        case awayTeam      = "visitor_team"
         case homeTeamScore = "home_team_score"
         case awayTeamScore = "visitor_team_score"
-        case dateGet = "date"
-        case season = "season"
-        case period = "period"
-        case status = "status"
-//        case time = "time"
+        case dateGet       = "date"
+        case season
+        case period
+        case status
+        case time
     }
 }
 

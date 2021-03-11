@@ -9,7 +9,10 @@ import UIKit
 
 class GameTableViewCell: UITableViewCell {
     
-    //MARK: - Properties
+    // MARK: - Properties
+    var game: Game?
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var homeTeamLogoImageView: UIImageView!
     @IBOutlet weak var homeTeamLabel: UILabel!
     @IBOutlet weak var homeTeamWinPointerLabel: UILabel!
@@ -21,9 +24,7 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var awayTeamWinPointerLabel: UILabel!
     @IBOutlet weak var awayScoreLabel: UILabel!
     
-    var game: Game?
-    
-    //MARK: - Methods
+    // MARK: - Methods
     func showWinnerScore(_ game: Game) {
         if (game.homeTeamScore ?? 0 > game.awayTeamScore ?? 0) {
             homeTeamWinPointerLabel.isHidden = false

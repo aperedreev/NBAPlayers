@@ -9,15 +9,20 @@ import UIKit
 
 class TeamDetailsViewController: UIViewController {
 
-    //MARK: - Properties
+    // MARK: - Properties
+    var team: Team?
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var conferenceLabel: UILabel!
     @IBOutlet weak var divisionLabel: UILabel!
     @IBOutlet weak var teamLogoImageView: UIImageView!
     
-    var team: Team?
+    // MARK: - Methods
     
-    //MARK: - Overrides
+    // MARK: - IBActions
+    
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
