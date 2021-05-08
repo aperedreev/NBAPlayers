@@ -102,14 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C58828925C81B93005392C1 /* Models */ = {
+		5C58828925C81B93005392C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5C63F3F125C081E6001260D9 /* Player.swift */,
 				5C63F3F625C09537001260D9 /* Team.swift */,
 				5C58827925C629F0005392C1 /* Game.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5C58828D25C81DC3005392C1 /* Utils */ = {
@@ -128,36 +128,24 @@
 			path = Clients;
 			sourceTree = "<group>";
 		};
-		5C58828F25C81E34005392C1 /* Delegates */ = {
+		5C58828F25C81E34005392C1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5C63F3AA25BF32B4001260D9 /* Assets.xcassets */,
+				5C63F3AF25BF32B4001260D9 /* Info.plist */,
 				5C63F3A125BF32AE001260D9 /* AppDelegate.swift */,
 				5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */,
 			);
-			path = Delegates;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5C58829025C81E75005392C1 /* Controllers */ = {
+		5C58829925C84F17005392C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5C63F3E725C063FF001260D9 /* PlayersViewController.swift */,
-				5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */,
-				5C61813325E439E400D34F92 /* TeamsViewController.swift */,
-				5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */,
-				5CD8489625C32149005B5CC3 /* GamesViewController.swift */,
-				5CCCCB2925D2DF24008AB927 /* GameDetailsViewController.swift */,
+				5C63F3A725BF32AE001260D9 /* Main.storyboard */,
+				5C63F3AC25BF32B4001260D9 /* LaunchScreen.storyboard */,
 			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		5C58829925C84F17005392C1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */,
-				5C61813B25E43EB600D34F92 /* TeamCollectionViewCell.swift */,
-				5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */,
-			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5C63F39525BF32AE001260D9 = {
@@ -184,15 +172,13 @@
 			isa = PBXGroup;
 			children = (
 				5C58828D25C81DC3005392C1 /* Utils */,
-				5C58828F25C81E34005392C1 /* Delegates */,
+				5C58828F25C81E34005392C1 /* Supporting Files */,
 				5C58828E25C81E26005392C1 /* Clients */,
-				5C58828925C81B93005392C1 /* Models */,
-				5C58829925C84F17005392C1 /* Views */,
-				5C58829025C81E75005392C1 /* Controllers */,
-				5C63F3A725BF32AE001260D9 /* Main.storyboard */,
-				5C63F3AA25BF32B4001260D9 /* Assets.xcassets */,
-				5C63F3AC25BF32B4001260D9 /* LaunchScreen.storyboard */,
-				5C63F3AF25BF32B4001260D9 /* Info.plist */,
+				FDAFC5FA2646B912007271B9 /* Players */,
+				FDAFC5FD2646B999007271B9 /* Teams */,
+				FDAFC5FE2646B9B6007271B9 /* Games */,
+				5C58828925C81B93005392C1 /* Model */,
+				5C58829925C84F17005392C1 /* View */,
 			);
 			path = NBAPlayers;
 			sourceTree = "<group>";
@@ -213,6 +199,60 @@
 				5C63F3C525BF32B4001260D9 /* Info.plist */,
 			);
 			path = NBAPlayersUITests;
+			sourceTree = "<group>";
+		};
+		FDAFC5FA2646B912007271B9 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				FDAFC5FC2646B96F007271B9 /* Cells */,
+				5C63F3E725C063FF001260D9 /* PlayersViewController.swift */,
+				5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		FDAFC5FC2646B96F007271B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FDAFC5FD2646B999007271B9 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				FDAFC5FF2646B9D0007271B9 /* Cells */,
+				5C61813325E439E400D34F92 /* TeamsViewController.swift */,
+				5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		FDAFC5FE2646B9B6007271B9 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				FDAFC6002646BA04007271B9 /* Cells */,
+				5CD8489625C32149005B5CC3 /* GamesViewController.swift */,
+				5CCCCB2925D2DF24008AB927 /* GameDetailsViewController.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		FDAFC5FF2646B9D0007271B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5C61813B25E43EB600D34F92 /* TeamCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FDAFC6002646BA04007271B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
