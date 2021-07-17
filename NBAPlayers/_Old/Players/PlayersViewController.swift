@@ -10,7 +10,7 @@ import UIKit
 class PlayersViewController: UIViewController {
     
     // MARK: - Properties
-    var players: [Player] = []
+    var players: [_Player] = []
     let apiClient: ApiClient = ApiClientImpl()
     
     let urlString = "https://www.balldontlie.io/api/v1/players"

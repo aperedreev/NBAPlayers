@@ -15,7 +15,7 @@ class DataFetcherService {
         self.dataFetcher = dataFetcher
     }
     
-    func fetchPlayers(completion: @escaping (Result<[Player]?, Error>) -> ()) {
+    func fetchPlayers(completion: @escaping (Result<[_Player]?, Error>) -> ()) {
         let urlPlayers = "https://www.balldontlie.io/api/v1/players?page=29&per_page=100"
         dataFetcher.fetchGenericJSONData(urlString: urlPlayers, response: completion)
     }

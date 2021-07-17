@@ -10,7 +10,7 @@ import UIKit
 class PlayerDetailsViewController: UIViewController {
 
     // MARK: - Properties
-    var player: Player?
+    var player: _Player?
     
     // MARK: - IBOutlets
     @IBOutlet weak var positionLabel: UILabel!

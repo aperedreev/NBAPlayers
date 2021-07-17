@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum ApiError: Error {
+enum _ApiError: Error {
     case noData
 }
 
 protocol ApiClient {
-    func getPlayers(completion: @escaping (Result<[Player], Error>) -> ())
+    func getPlayers(completion: @escaping (Result<[_Player], Error>) -> ())
     
     func getTeams(completion: @escaping (Result<[Team], Error>) -> ())
     
@@ -20,7 +20,7 @@ protocol ApiClient {
 }
 
 class ApiClientImpl: ApiClient {
-    func getPlayers(completion: @escaping (Result<[Player], Error>) -> ()) {
+    func getPlayers(completion: @escaping (Result<[_Player], Error>) -> ()) {
         let session = URLSession.shared
         
         guard let url = URL(string: "https://www.balldontlie.io/api/v1/players?page=29&per_page=100") else { return }

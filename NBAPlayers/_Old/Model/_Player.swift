@@ -8,10 +8,10 @@
 import Foundation
 
 struct PlayersResponse: Decodable {
-    let data: [Player]
+    let data: [_Player]
 }
 
-struct Player: Decodable {
+struct _Player: Decodable {
     let firstName: String
     let lastName: String
 

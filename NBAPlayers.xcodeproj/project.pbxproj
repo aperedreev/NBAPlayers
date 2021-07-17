@@ -7,28 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ECC5F017DC3A26D9AADB47B /* Pods_NBAPlayers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED5897C90B43457C97A625F /* Pods_NBAPlayers.framework */; };
 		5C0A1F3125DB2D25000AAA25 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */; };
 		5C58827A25C629F0005392C1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58827925C629F0005392C1 /* Game.swift */; };
 		5C58829B25C84F3B005392C1 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */; };
 		5C61813425E439E400D34F92 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61813325E439E400D34F92 /* TeamsViewController.swift */; };
 		5C61813C25E43EB600D34F92 /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61813B25E43EB600D34F92 /* TeamCollectionViewCell.swift */; };
 		5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3A125BF32AE001260D9 /* AppDelegate.swift */; };
-		5C63F3A425BF32AE001260D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */; };
 		5C63F3A925BF32AE001260D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C63F3A725BF32AE001260D9 /* Main.storyboard */; };
 		5C63F3AE25BF32B4001260D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C63F3AC25BF32B4001260D9 /* LaunchScreen.storyboard */; };
 		5C63F3B925BF32B4001260D9 /* NBAPlayersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3B825BF32B4001260D9 /* NBAPlayersTests.swift */; };
 		5C63F3C425BF32B4001260D9 /* NBAPlayersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3C325BF32B4001260D9 /* NBAPlayersUITests.swift */; };
 		5C63F3E825C06400001260D9 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3E725C063FF001260D9 /* PlayersViewController.swift */; };
 		5C63F3ED25C06A56001260D9 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */; };
-		5C63F3F225C081E7001260D9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F125C081E6001260D9 /* Player.swift */; };
+		5C63F3F225C081E7001260D9 /* _Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F125C081E6001260D9 /* _Player.swift */; };
 		5C63F3F725C09537001260D9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F625C09537001260D9 /* Team.swift */; };
 		5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */; };
 		5C63F40225C19141001260D9 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F40125C19141001260D9 /* ApiClient.swift */; };
 		5CC2E4BA25D4006100CA4EF5 /* PushControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2E4B925D4006100CA4EF5 /* PushControllerUtils.swift */; };
 		5CCCCB2A25D2DF24008AB927 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCCB2925D2DF24008AB927 /* GameDetailsViewController.swift */; };
 		5CD8489725C32149005B5CC3 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD8489625C32149005B5CC3 /* GamesViewController.swift */; };
-		C19F92BEE26C77BDD0BE51F9 /* Pods_NBAPlayers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8C7045D8E914BE4AC6B506 /* Pods_NBAPlayers.framework */; };
 		FD6009FE26A37773003EF022 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6009FD26A37773003EF022 /* R.generated.swift */; };
+		FD600A2826A37934003EF022 /* APIServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A0926A37934003EF022 /* APIServiceContainer.swift */; };
+		FD600A2926A37934003EF022 /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A0B26A37934003EF022 /* GeneralAPI.swift */; };
+		FD600A2A26A37934003EF022 /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A0C26A37934003EF022 /* GeneralService.swift */; };
+		FD600A2B26A37934003EF022 /* MasterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A0D26A37934003EF022 /* MasterProvider.swift */; };
+		FD600A2C26A37934003EF022 /* BaseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1026A37934003EF022 /* BaseMapper.swift */; };
+		FD600A2D26A37934003EF022 /* PlayerMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1126A37934003EF022 /* PlayerMapper.swift */; };
+		FD600A2E26A37934003EF022 /* PlayersFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1326A37934003EF022 /* PlayersFlow.swift */; };
+		FD600A2F26A37934003EF022 /* DashboardFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1426A37934003EF022 /* DashboardFlow.swift */; };
+		FD600A3026A37934003EF022 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1526A37934003EF022 /* AppFlow.swift */; };
+		FD600A3126A37934003EF022 /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1626A37934003EF022 /* AppStep.swift */; };
+		FD600A3226A37934003EF022 /* PlayersScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1A26A37934003EF022 /* PlayersScreenViewModel.swift */; };
+		FD600A3326A37934003EF022 /* PlayersScreenViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1B26A37934003EF022 /* PlayersScreenViewModelProtocols.swift */; };
+		FD600A3426A37934003EF022 /* PlayersScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1D26A37934003EF022 /* PlayersScreenDataSource.swift */; };
+		FD600A3526A37934003EF022 /* PlayersScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1E26A37934003EF022 /* PlayersScreenBuilder.swift */; };
+		FD600A3626A37934003EF022 /* PlayersScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD600A2026A37934003EF022 /* PlayersScreenViewController.storyboard */; };
+		FD600A3726A37934003EF022 /* PlayersScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A2126A37934003EF022 /* PlayersScreenViewController.swift */; };
+		FD600A3826A37934003EF022 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A2426A37934003EF022 /* ServerResponse.swift */; };
+		FD600A3926A37934003EF022 /* ServerPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A2526A37934003EF022 /* ServerPlayer.swift */; };
+		FD600A3A26A37934003EF022 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A2726A37934003EF022 /* Player.swift */; };
+		FD600A3C26A37AE1003EF022 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A3B26A37AE1003EF022 /* Consts.swift */; };
+		FD600A3F26A38FF9003EF022 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A3E26A38FF9003EF022 /* PlayerCell.swift */; };
 		FDAFC6022646E31B007271B9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6012646E31B007271B9 /* NetworkService.swift */; };
 		FDAFC6042646E497007271B9 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6032646E497007271B9 /* NetworkDataFetcher.swift */; };
 		FDAFC6062647380E007271B9 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6052647380E007271B9 /* DataFetcherService.swift */; };
@@ -54,8 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		091075DBB7728E0382DFED9E /* Pods-NBAPlayers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBAPlayers.debug.xcconfig"; path = "Target Support Files/Pods-NBAPlayers/Pods-NBAPlayers.debug.xcconfig"; sourceTree = "<group>"; };
-		487E12199F57BE447E9490CA /* Pods-NBAPlayers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBAPlayers.release.xcconfig"; path = "Target Support Files/Pods-NBAPlayers/Pods-NBAPlayers.release.xcconfig"; sourceTree = "<group>"; };
+		07DB279B5438D208FEED7010 /* Pods-NBAPlayers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBAPlayers.release.xcconfig"; path = "Target Support Files/Pods-NBAPlayers/Pods-NBAPlayers.release.xcconfig"; sourceTree = "<group>"; };
 		5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		5C58827925C629F0005392C1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
@@ -63,7 +82,6 @@
 		5C61813B25E43EB600D34F92 /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C63F39E25BF32AE001260D9 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C63F3A125BF32AE001260D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5C63F3A825BF32AE001260D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C63F3AD25BF32B4001260D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C63F3AF25BF32B4001260D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,15 +93,37 @@
 		5C63F3C525BF32B4001260D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C63F3E725C063FF001260D9 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
-		5C63F3F125C081E6001260D9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5C63F3F125C081E6001260D9 /* _Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Player.swift; sourceTree = "<group>"; };
 		5C63F3F625C09537001260D9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 		5C63F40125C19141001260D9 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		5CC2E4B925D4006100CA4EF5 /* PushControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushControllerUtils.swift; sourceTree = "<group>"; };
 		5CCCCB2925D2DF24008AB927 /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		5CD8489625C32149005B5CC3 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
-		8C8C7045D8E914BE4AC6B506 /* Pods_NBAPlayers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBAPlayers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ECB51198A1022513E9464EE /* Pods-NBAPlayers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBAPlayers.debug.xcconfig"; path = "Target Support Files/Pods-NBAPlayers/Pods-NBAPlayers.debug.xcconfig"; sourceTree = "<group>"; };
+		EED5897C90B43457C97A625F /* Pods_NBAPlayers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBAPlayers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6009FD26A37773003EF022 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		FD600A0926A37934003EF022 /* APIServiceContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceContainer.swift; sourceTree = "<group>"; };
+		FD600A0B26A37934003EF022 /* GeneralAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
+		FD600A0C26A37934003EF022 /* GeneralService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
+		FD600A0D26A37934003EF022 /* MasterProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterProvider.swift; sourceTree = "<group>"; };
+		FD600A1026A37934003EF022 /* BaseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapper.swift; sourceTree = "<group>"; };
+		FD600A1126A37934003EF022 /* PlayerMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerMapper.swift; sourceTree = "<group>"; };
+		FD600A1326A37934003EF022 /* PlayersFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersFlow.swift; sourceTree = "<group>"; };
+		FD600A1426A37934003EF022 /* DashboardFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardFlow.swift; sourceTree = "<group>"; };
+		FD600A1526A37934003EF022 /* AppFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		FD600A1626A37934003EF022 /* AppStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
+		FD600A1A26A37934003EF022 /* PlayersScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersScreenViewModel.swift; sourceTree = "<group>"; };
+		FD600A1B26A37934003EF022 /* PlayersScreenViewModelProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersScreenViewModelProtocols.swift; sourceTree = "<group>"; };
+		FD600A1D26A37934003EF022 /* PlayersScreenDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersScreenDataSource.swift; sourceTree = "<group>"; };
+		FD600A1E26A37934003EF022 /* PlayersScreenBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersScreenBuilder.swift; sourceTree = "<group>"; };
+		FD600A2026A37934003EF022 /* PlayersScreenViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayersScreenViewController.storyboard; sourceTree = "<group>"; };
+		FD600A2126A37934003EF022 /* PlayersScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersScreenViewController.swift; sourceTree = "<group>"; };
+		FD600A2426A37934003EF022 /* ServerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		FD600A2526A37934003EF022 /* ServerPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerPlayer.swift; sourceTree = "<group>"; };
+		FD600A2726A37934003EF022 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FD600A3B26A37AE1003EF022 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		FD600A3E26A38FF9003EF022 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		FDAFC6012646E31B007271B9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FDAFC6032646E497007271B9 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		FDAFC6052647380E007271B9 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
@@ -96,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C19F92BEE26C77BDD0BE51F9 /* Pods_NBAPlayers.framework in Frameworks */,
+				4ECC5F017DC3A26D9AADB47B /* Pods_NBAPlayers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,10 +157,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		44C8E1BEF7D366F32C0845FC /* Frameworks */ = {
+		03596FC37ACBF948C0CBF266 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8C8C7045D8E914BE4AC6B506 /* Pods_NBAPlayers.framework */,
+				EED5897C90B43457C97A625F /* Pods_NBAPlayers.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,7 +168,7 @@
 		5C58828925C81B93005392C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5C63F3F125C081E6001260D9 /* Player.swift */,
+				5C63F3F125C081E6001260D9 /* _Player.swift */,
 				5C63F3F625C09537001260D9 /* Team.swift */,
 				5C58827925C629F0005392C1 /* Game.swift */,
 			);
@@ -180,7 +220,7 @@
 				5C63F3C225BF32B4001260D9 /* NBAPlayersUITests */,
 				5C63F39F25BF32AE001260D9 /* Products */,
 				88FC979D12CD878D3D577359 /* Pods */,
-				44C8E1BEF7D366F32C0845FC /* Frameworks */,
+				03596FC37ACBF948C0CBF266 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,16 +237,14 @@
 		5C63F3A025BF32AE001260D9 /* NBAPlayers */ = {
 			isa = PBXGroup;
 			children = (
-				FD6009FC26A37757003EF022 /* Helpers */,
 				FDD20DF726A35A29003B7E50 /* App */,
-				5C58828D25C81DC3005392C1 /* Utils */,
+				FD600A2226A37934003EF022 /* Models */,
+				FD600A1726A37934003EF022 /* Modules */,
+				FD600A1226A37934003EF022 /* Router */,
+				FD600A0826A37934003EF022 /* Services */,
+				FD6009FF26A3780B003EF022 /* _Old */,
+				FD6009FC26A37757003EF022 /* Helpers */,
 				5C58828F25C81E34005392C1 /* Resources */,
-				5C58828E25C81E26005392C1 /* Clients */,
-				FDAFC5FA2646B912007271B9 /* Players */,
-				FDAFC5FD2646B999007271B9 /* Teams */,
-				FDAFC5FE2646B9B6007271B9 /* Games */,
-				5C58828925C81B93005392C1 /* Model */,
-				5C58829925C84F17005392C1 /* View */,
 			);
 			path = NBAPlayers;
 			sourceTree = "<group>";
@@ -232,8 +270,8 @@
 		88FC979D12CD878D3D577359 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				091075DBB7728E0382DFED9E /* Pods-NBAPlayers.debug.xcconfig */,
-				487E12199F57BE447E9490CA /* Pods-NBAPlayers.release.xcconfig */,
+				5ECB51198A1022513E9464EE /* Pods-NBAPlayers.debug.xcconfig */,
+				07DB279B5438D208FEED7010 /* Pods-NBAPlayers.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -242,8 +280,151 @@
 			isa = PBXGroup;
 			children = (
 				FD6009FD26A37773003EF022 /* R.generated.swift */,
+				FD600A3B26A37AE1003EF022 /* Consts.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FD6009FF26A3780B003EF022 /* _Old */ = {
+			isa = PBXGroup;
+			children = (
+				5C58828D25C81DC3005392C1 /* Utils */,
+				5C58828E25C81E26005392C1 /* Clients */,
+				FDAFC5FA2646B912007271B9 /* Players */,
+				FDAFC5FD2646B999007271B9 /* Teams */,
+				FDAFC5FE2646B9B6007271B9 /* Games */,
+				5C58828925C81B93005392C1 /* Model */,
+				5C58829925C84F17005392C1 /* View */,
+			);
+			path = _Old;
+			sourceTree = "<group>";
+		};
+		FD600A0826A37934003EF022 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A0926A37934003EF022 /* APIServiceContainer.swift */,
+				FD600A0A26A37934003EF022 /* API */,
+				FD600A0E26A37934003EF022 /* Mappers */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FD600A0A26A37934003EF022 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A0B26A37934003EF022 /* GeneralAPI.swift */,
+				FD600A0C26A37934003EF022 /* GeneralService.swift */,
+				FD600A0D26A37934003EF022 /* MasterProvider.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FD600A0E26A37934003EF022 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A0F26A37934003EF022 /* BaseMapper */,
+				FD600A1126A37934003EF022 /* PlayerMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		FD600A0F26A37934003EF022 /* BaseMapper */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A1026A37934003EF022 /* BaseMapper.swift */,
+			);
+			path = BaseMapper;
+			sourceTree = "<group>";
+		};
+		FD600A1226A37934003EF022 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A1626A37934003EF022 /* AppStep.swift */,
+				FD600A1526A37934003EF022 /* AppFlow.swift */,
+				FD600A1426A37934003EF022 /* DashboardFlow.swift */,
+				FD600A1326A37934003EF022 /* PlayersFlow.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FD600A1726A37934003EF022 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A1826A37934003EF022 /* PlayersScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FD600A1826A37934003EF022 /* PlayersScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A1926A37934003EF022 /* ViewModel */,
+				FD600A1C26A37934003EF022 /* DataSource */,
+				FD600A1E26A37934003EF022 /* PlayersScreenBuilder.swift */,
+				FD600A1F26A37934003EF022 /* View */,
+			);
+			path = PlayersScreen;
+			sourceTree = "<group>";
+		};
+		FD600A1926A37934003EF022 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A1A26A37934003EF022 /* PlayersScreenViewModel.swift */,
+				FD600A1B26A37934003EF022 /* PlayersScreenViewModelProtocols.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FD600A1C26A37934003EF022 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A1D26A37934003EF022 /* PlayersScreenDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		FD600A1F26A37934003EF022 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A3D26A38FDF003EF022 /* Cells */,
+				FD600A2026A37934003EF022 /* PlayersScreenViewController.storyboard */,
+				FD600A2126A37934003EF022 /* PlayersScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD600A2226A37934003EF022 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A2326A37934003EF022 /* Server */,
+				FD600A2626A37934003EF022 /* Local */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FD600A2326A37934003EF022 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A2426A37934003EF022 /* ServerResponse.swift */,
+				FD600A2526A37934003EF022 /* ServerPlayer.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		FD600A2626A37934003EF022 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A2726A37934003EF022 /* Player.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		FD600A3D26A38FDF003EF022 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A3E26A38FF9003EF022 /* PlayerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FDAFC5FA2646B912007271B9 /* Players */ = {
@@ -305,7 +486,6 @@
 			children = (
 				5C63F3AF25BF32B4001260D9 /* Info.plist */,
 				5C63F3A125BF32AE001260D9 /* AppDelegate.swift */,
-				5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -317,12 +497,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C63F3C825BF32B4001260D9 /* Build configuration list for PBXNativeTarget "NBAPlayers" */;
 			buildPhases = (
-				FAFA1A9996E1C9BDAA694FBA /* [CP] Check Pods Manifest.lock */,
+				96F4E77472C62674A82A464B /* [CP] Check Pods Manifest.lock */,
 				FD6009FB26A375B5003EF022 /* ShellScript */,
 				5C63F39A25BF32AE001260D9 /* Sources */,
 				5C63F39B25BF32AE001260D9 /* Frameworks */,
 				5C63F39C25BF32AE001260D9 /* Resources */,
-				FBC44DCEFE1C1416194D5346 /* [CP] Embed Pods Frameworks */,
+				EF4810CC07FC99F6372D2D9F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -418,6 +598,7 @@
 			files = (
 				5C63F3AE25BF32B4001260D9 /* LaunchScreen.storyboard in Resources */,
 				FDD20DF926A35CE2003B7E50 /* Assets.xcassets in Resources */,
+				FD600A3626A37934003EF022 /* PlayersScreenViewController.storyboard in Resources */,
 				5C63F3A925BF32AE001260D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,7 +620,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FAFA1A9996E1C9BDAA694FBA /* [CP] Check Pods Manifest.lock */ = {
+		96F4E77472C62674A82A464B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -461,7 +642,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FBC44DCEFE1C1416194D5346 /* [CP] Embed Pods Frameworks */ = {
+		EF4810CC07FC99F6372D2D9F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -505,25 +686,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C0A1F3125DB2D25000AAA25 /* PlayerTableViewCell.swift in Sources */,
+				FD600A3C26A37AE1003EF022 /* Consts.swift in Sources */,
+				FD600A3226A37934003EF022 /* PlayersScreenViewModel.swift in Sources */,
 				5C63F3F725C09537001260D9 /* Team.swift in Sources */,
+				FD600A3726A37934003EF022 /* PlayersScreenViewController.swift in Sources */,
+				FD600A3526A37934003EF022 /* PlayersScreenBuilder.swift in Sources */,
+				FD600A2B26A37934003EF022 /* MasterProvider.swift in Sources */,
 				5CC2E4BA25D4006100CA4EF5 /* PushControllerUtils.swift in Sources */,
 				5CCCCB2A25D2DF24008AB927 /* GameDetailsViewController.swift in Sources */,
 				5C58827A25C629F0005392C1 /* Game.swift in Sources */,
+				FD600A2F26A37934003EF022 /* DashboardFlow.swift in Sources */,
 				FDAFC6022646E31B007271B9 /* NetworkService.swift in Sources */,
 				FDAFC6042646E497007271B9 /* NetworkDataFetcher.swift in Sources */,
 				5C61813C25E43EB600D34F92 /* TeamCollectionViewCell.swift in Sources */,
+				FD600A2C26A37934003EF022 /* BaseMapper.swift in Sources */,
+				FD600A2826A37934003EF022 /* APIServiceContainer.swift in Sources */,
 				FD6009FE26A37773003EF022 /* R.generated.swift in Sources */,
+				FD600A3026A37934003EF022 /* AppFlow.swift in Sources */,
 				5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */,
-				5C63F3A425BF32AE001260D9 /* SceneDelegate.swift in Sources */,
 				5C63F40225C19141001260D9 /* ApiClient.swift in Sources */,
 				5CD8489725C32149005B5CC3 /* GamesViewController.swift in Sources */,
+				FD600A3426A37934003EF022 /* PlayersScreenDataSource.swift in Sources */,
+				FD600A3926A37934003EF022 /* ServerPlayer.swift in Sources */,
+				FD600A2D26A37934003EF022 /* PlayerMapper.swift in Sources */,
+				FD600A3F26A38FF9003EF022 /* PlayerCell.swift in Sources */,
+				FD600A3A26A37934003EF022 /* Player.swift in Sources */,
 				5C58829B25C84F3B005392C1 /* GameTableViewCell.swift in Sources */,
 				5C63F3ED25C06A56001260D9 /* PlayerDetailsViewController.swift in Sources */,
+				FD600A3326A37934003EF022 /* PlayersScreenViewModelProtocols.swift in Sources */,
 				FDAFC60826473D3E007271B9 /* API.swift in Sources */,
-				5C63F3F225C081E7001260D9 /* Player.swift in Sources */,
+				5C63F3F225C081E7001260D9 /* _Player.swift in Sources */,
 				5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */,
+				FD600A2E26A37934003EF022 /* PlayersFlow.swift in Sources */,
+				FD600A3826A37934003EF022 /* ServerResponse.swift in Sources */,
 				FDAFC6062647380E007271B9 /* DataFetcherService.swift in Sources */,
 				5C61813425E439E400D34F92 /* TeamsViewController.swift in Sources */,
+				FD600A2926A37934003EF022 /* GeneralAPI.swift in Sources */,
+				FD600A3126A37934003EF022 /* AppStep.swift in Sources */,
+				FD600A2A26A37934003EF022 /* GeneralService.swift in Sources */,
 				5C63F3E825C06400001260D9 /* PlayersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,7 +897,7 @@
 		};
 		5C63F3C925BF32B4001260D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 091075DBB7728E0382DFED9E /* Pods-NBAPlayers.debug.xcconfig */;
+			baseConfigurationReference = 5ECB51198A1022513E9464EE /* Pods-NBAPlayers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -718,7 +918,7 @@
 		};
 		5C63F3CA25BF32B4001260D9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 487E12199F57BE447E9490CA /* Pods-NBAPlayers.release.xcconfig */;
+			baseConfigurationReference = 07DB279B5438D208FEED7010 /* Pods-NBAPlayers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

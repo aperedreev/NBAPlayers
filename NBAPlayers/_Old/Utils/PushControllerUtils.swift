@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-func showPlayerDetailsViewController(from controller: UIViewController, with player: Player) {
+func showPlayerDetailsViewController(from controller: UIViewController, with player: _Player) {
     let storyboard = UIStoryboard(name: "Main", bundle: .main)
     let viewController = storyboard.instantiateViewController(identifier: "PlayerDetailsViewController") as! PlayerDetailsViewController
     
