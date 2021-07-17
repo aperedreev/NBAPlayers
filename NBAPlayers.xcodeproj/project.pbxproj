@@ -31,7 +31,7 @@
 		FDAFC6042646E497007271B9 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6032646E497007271B9 /* NetworkDataFetcher.swift */; };
 		FDAFC6062647380E007271B9 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6052647380E007271B9 /* DataFetcherService.swift */; };
 		FDAFC60826473D3E007271B9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC60726473D3E007271B9 /* API.swift */; };
-		FDD20DF626A344FB003B7E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C63F3AA25BF32B4001260D9 /* Assets.xcassets */; };
+		FDD20DF926A35CE2003B7E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD20DF826A35CE2003B7E50 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,6 @@
 		5C63F3A125BF32AE001260D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C63F3A325BF32AE001260D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5C63F3A825BF32AE001260D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5C63F3AA25BF32B4001260D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		5C63F3AD25BF32B4001260D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C63F3AF25BF32B4001260D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C63F3B425BF32B4001260D9 /* NBAPlayersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBAPlayersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +82,7 @@
 		FDAFC6032646E497007271B9 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		FDAFC6052647380E007271B9 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 		FDAFC60726473D3E007271B9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FDD20DF826A35CE2003B7E50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +143,8 @@
 		5C58828F25C81E34005392C1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5C63F3AA25BF32B4001260D9 /* Assets.xcassets */,
 				5C63F3AC25BF32B4001260D9 /* LaunchScreen.storyboard */,
+				FDD20DF826A35CE2003B7E50 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C63F3AE25BF32B4001260D9 /* LaunchScreen.storyboard in Resources */,
-				FDD20DF626A344FB003B7E50 /* Assets.xcassets in Resources */,
+				FDD20DF926A35CE2003B7E50 /* Assets.xcassets in Resources */,
 				5C63F3A925BF32AE001260D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
