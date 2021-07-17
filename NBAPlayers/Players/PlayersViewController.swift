@@ -13,6 +13,10 @@ class PlayersViewController: UIViewController {
     var players: [Player] = []
     let apiClient: ApiClient = ApiClientImpl()
     
+    let urlString = "https://www.balldontlie.io/api/v1/players"
+    
+    var dataFetcherService = DataFetcherService()
+    
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
@@ -40,6 +44,21 @@ class PlayersViewController: UIViewController {
     
     private func reloadData() {
         showLoading()
+        
+//        dataFetcherService.fetchPlayers { result in
+//            switch result {
+//            case .success( let players):
+//                guard let players = players else {
+//                    return
+//                }
+//                self.players = players
+//                self.showData()
+//            case .failure:
+//                self.players = []
+//                self.showError()
+//            }
+//        }
+        
         apiClient.getPlayers(completion: {result in
             DispatchQueue.main.async {
                 switch result {
