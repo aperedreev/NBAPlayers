@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,8 @@
 		5CC2E4BA25D4006100CA4EF5 /* PushControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2E4B925D4006100CA4EF5 /* PushControllerUtils.swift */; };
 		5CCCCB2A25D2DF24008AB927 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCCB2925D2DF24008AB927 /* GameDetailsViewController.swift */; };
 		5CD8489725C32149005B5CC3 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD8489625C32149005B5CC3 /* GamesViewController.swift */; };
+		C19F92BEE26C77BDD0BE51F9 /* Pods_NBAPlayers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8C7045D8E914BE4AC6B506 /* Pods_NBAPlayers.framework */; };
+		FD6009FE26A37773003EF022 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6009FD26A37773003EF022 /* R.generated.swift */; };
 		FDAFC6022646E31B007271B9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6012646E31B007271B9 /* NetworkService.swift */; };
 		FDAFC6042646E497007271B9 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6032646E497007271B9 /* NetworkDataFetcher.swift */; };
 		FDAFC6062647380E007271B9 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6052647380E007271B9 /* DataFetcherService.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		091075DBB7728E0382DFED9E /* Pods-NBAPlayers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBAPlayers.debug.xcconfig"; path = "Target Support Files/Pods-NBAPlayers/Pods-NBAPlayers.debug.xcconfig"; sourceTree = "<group>"; };
+		487E12199F57BE447E9490CA /* Pods-NBAPlayers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBAPlayers.release.xcconfig"; path = "Target Support Files/Pods-NBAPlayers/Pods-NBAPlayers.release.xcconfig"; sourceTree = "<group>"; };
 		5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		5C58827925C629F0005392C1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		5CC2E4B925D4006100CA4EF5 /* PushControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushControllerUtils.swift; sourceTree = "<group>"; };
 		5CCCCB2925D2DF24008AB927 /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		5CD8489625C32149005B5CC3 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		8C8C7045D8E914BE4AC6B506 /* Pods_NBAPlayers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBAPlayers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6009FD26A37773003EF022 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FDAFC6012646E31B007271B9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FDAFC6032646E497007271B9 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		FDAFC6052647380E007271B9 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19F92BEE26C77BDD0BE51F9 /* Pods_NBAPlayers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44C8E1BEF7D366F32C0845FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C8C7045D8E914BE4AC6B506 /* Pods_NBAPlayers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5C58828925C81B93005392C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +179,8 @@
 				5C63F3B725BF32B4001260D9 /* NBAPlayersTests */,
 				5C63F3C225BF32B4001260D9 /* NBAPlayersUITests */,
 				5C63F39F25BF32AE001260D9 /* Products */,
+				88FC979D12CD878D3D577359 /* Pods */,
+				44C8E1BEF7D366F32C0845FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +197,7 @@
 		5C63F3A025BF32AE001260D9 /* NBAPlayers */ = {
 			isa = PBXGroup;
 			children = (
+				FD6009FC26A37757003EF022 /* Helpers */,
 				FDD20DF726A35A29003B7E50 /* App */,
 				5C58828D25C81DC3005392C1 /* Utils */,
 				5C58828F25C81E34005392C1 /* Resources */,
@@ -209,6 +227,23 @@
 				5C63F3C525BF32B4001260D9 /* Info.plist */,
 			);
 			path = NBAPlayersUITests;
+			sourceTree = "<group>";
+		};
+		88FC979D12CD878D3D577359 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				091075DBB7728E0382DFED9E /* Pods-NBAPlayers.debug.xcconfig */,
+				487E12199F57BE447E9490CA /* Pods-NBAPlayers.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD6009FC26A37757003EF022 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD6009FD26A37773003EF022 /* R.generated.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FDAFC5FA2646B912007271B9 /* Players */ = {
@@ -282,9 +317,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C63F3C825BF32B4001260D9 /* Build configuration list for PBXNativeTarget "NBAPlayers" */;
 			buildPhases = (
+				FAFA1A9996E1C9BDAA694FBA /* [CP] Check Pods Manifest.lock */,
+				FD6009FB26A375B5003EF022 /* ShellScript */,
 				5C63F39A25BF32AE001260D9 /* Sources */,
 				5C63F39B25BF32AE001260D9 /* Frameworks */,
 				5C63F39C25BF32AE001260D9 /* Resources */,
+				FBC44DCEFE1C1416194D5346 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,6 +438,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FAFA1A9996E1C9BDAA694FBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NBAPlayers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC44DCEFE1C1416194D5346 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NBAPlayers/Pods-NBAPlayers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NBAPlayers/Pods-NBAPlayers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NBAPlayers/Pods-NBAPlayers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD6009FB26A375B5003EF022 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C63F39A25BF32AE001260D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -413,6 +512,7 @@
 				FDAFC6022646E31B007271B9 /* NetworkService.swift in Sources */,
 				FDAFC6042646E497007271B9 /* NetworkDataFetcher.swift in Sources */,
 				5C61813C25E43EB600D34F92 /* TeamCollectionViewCell.swift in Sources */,
+				FD6009FE26A37773003EF022 /* R.generated.swift in Sources */,
 				5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */,
 				5C63F3A425BF32AE001260D9 /* SceneDelegate.swift in Sources */,
 				5C63F40225C19141001260D9 /* ApiClient.swift in Sources */,
@@ -597,6 +697,7 @@
 		};
 		5C63F3C925BF32B4001260D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 091075DBB7728E0382DFED9E /* Pods-NBAPlayers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -617,6 +718,7 @@
 		};
 		5C63F3CA25BF32B4001260D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 487E12199F57BE447E9490CA /* Pods-NBAPlayers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
