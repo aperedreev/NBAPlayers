@@ -57,9 +57,9 @@ final class DashboardFlow: Flow {
         Flows.use(playersFlow,
                   when: .ready) { [unowned self] (root1: UINC) in
 
-            let tabBarItem1 = UITabBarItem(title: "Главная",
-                                           image: UIImage(named: "mainActive"),
-                                           selectedImage: UIImage(named: "mainInactive"))
+            let tabBarItem1 = UITabBarItem(title: "Players",
+                                           image: UIImage(systemName: "person")?.withTintColor(.gray),
+                                           selectedImage: UIImage(systemName: "person")?.withTintColor(.orange))
 
             root1.tabBarItem = tabBarItem1
 

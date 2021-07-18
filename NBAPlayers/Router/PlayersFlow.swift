@@ -43,7 +43,7 @@ final class PlayersFlow: Flow {
 
 
     private func navigationToPlayersScreen() -> FlowContributors {
-        let viewController = PlayersScreenViewController.instantiate()
+        let viewController = PlayersScreenViewController()
         let viewModel = PlayersScreenViewModel()
         viewController.inject(viewModel)
 

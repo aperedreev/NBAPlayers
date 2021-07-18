@@ -42,7 +42,6 @@
 		FD600A3326A37934003EF022 /* PlayersScreenViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1B26A37934003EF022 /* PlayersScreenViewModelProtocols.swift */; };
 		FD600A3426A37934003EF022 /* PlayersScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1D26A37934003EF022 /* PlayersScreenDataSource.swift */; };
 		FD600A3526A37934003EF022 /* PlayersScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A1E26A37934003EF022 /* PlayersScreenBuilder.swift */; };
-		FD600A3626A37934003EF022 /* PlayersScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD600A2026A37934003EF022 /* PlayersScreenViewController.storyboard */; };
 		FD600A3726A37934003EF022 /* PlayersScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A2126A37934003EF022 /* PlayersScreenViewController.swift */; };
 		FD600A3826A37934003EF022 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A2426A37934003EF022 /* ServerResponse.swift */; };
 		FD600A3926A37934003EF022 /* ServerPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A2526A37934003EF022 /* ServerPlayer.swift */; };
@@ -117,7 +116,6 @@
 		FD600A1B26A37934003EF022 /* PlayersScreenViewModelProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersScreenViewModelProtocols.swift; sourceTree = "<group>"; };
 		FD600A1D26A37934003EF022 /* PlayersScreenDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersScreenDataSource.swift; sourceTree = "<group>"; };
 		FD600A1E26A37934003EF022 /* PlayersScreenBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersScreenBuilder.swift; sourceTree = "<group>"; };
-		FD600A2026A37934003EF022 /* PlayersScreenViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayersScreenViewController.storyboard; sourceTree = "<group>"; };
 		FD600A2126A37934003EF022 /* PlayersScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersScreenViewController.swift; sourceTree = "<group>"; };
 		FD600A2426A37934003EF022 /* ServerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		FD600A2526A37934003EF022 /* ServerPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerPlayer.swift; sourceTree = "<group>"; };
@@ -387,7 +385,6 @@
 			isa = PBXGroup;
 			children = (
 				FD600A3D26A38FDF003EF022 /* Cells */,
-				FD600A2026A37934003EF022 /* PlayersScreenViewController.storyboard */,
 				FD600A2126A37934003EF022 /* PlayersScreenViewController.swift */,
 			);
 			path = View;
@@ -598,7 +595,6 @@
 			files = (
 				5C63F3AE25BF32B4001260D9 /* LaunchScreen.storyboard in Resources */,
 				FDD20DF926A35CE2003B7E50 /* Assets.xcassets in Resources */,
-				FD600A3626A37934003EF022 /* PlayersScreenViewController.storyboard in Resources */,
 				5C63F3A925BF32AE001260D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

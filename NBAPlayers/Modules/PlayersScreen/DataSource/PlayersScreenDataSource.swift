@@ -22,10 +22,12 @@ final class PlayersScreenDataSource {
     
     typealias DataSource = RxTableViewSectionedReloadDataSource<SectionType>
     
-    let dataSource = DataSource { dataSource, tableView, indexPath, _ -> UITableViewCell in
+    let dataSource = DataSource { dataSource, tableView, indexPath, items -> UITableViewCell in
         switch dataSource[indexPath] {
-        default:
-            return UITableViewCell()
+        case .players:
+            let cell: PlayerCell = tableView.dequeueReusableCell(for: indexPath)
+            
+            return cell
         }
     }
 }

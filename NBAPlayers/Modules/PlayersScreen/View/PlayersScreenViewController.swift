@@ -11,9 +11,11 @@ import RxCocoa
 import Reusable
 import Then
 
-final class PlayersScreenViewController: UIViewController, StoryboardBased {
+final class PlayersScreenViewController: UIViewController, Reusable {
     
     // MARK: - Properties
+    
+    private let generalService = GeneralService()
     
     private let disposeBag = DisposeBag()
     
@@ -25,7 +27,7 @@ final class PlayersScreenViewController: UIViewController, StoryboardBased {
     
     // MARK: - Outlets
     
-    @IBOutlet private weak var tableView: UITableView!
+    private var tableView: UITableView!
     
     // MARK: - Lifecycle
     
@@ -33,6 +35,7 @@ final class PlayersScreenViewController: UIViewController, StoryboardBased {
         super.viewDidLoad()
         
         configureUI()
+        fetchData()
         bindUI()
     }
     
@@ -60,16 +63,28 @@ private extension PlayersScreenViewController {
     }
     
     func configureViews() {
-        navigationController?.navigationBar.isHidden = true
+        navigationItem.title = "Players"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        view.backgroundColor = .tertiarySystemGroupedBackground
+        navigationController?.navigationBar.backgroundColor = .tertiarySystemGroupedBackground
+        
     }
     
     func configureTableView() {
-        tableView.do {
-            $0.separatorStyle = .none
+        
+        tableView = UITableView(frame: .zero, style: .insetGrouped).then {
+            $0.register(cellType: PlayerCell.self)
+            $0.backgroundColor = .tertiarySystemGroupedBackground
             $0.showsVerticalScrollIndicator = false
             $0.tableFooterView = UIView()
-            $0.alwaysBounceVertical = false
-            $0.bounces = false
+            $0.alwaysBounceVertical = true
+            $0.bounces = true
+        }
+        
+        view.addSubview(tableView)
+        
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
         
     }
@@ -78,9 +93,21 @@ private extension PlayersScreenViewController {
 
 private extension PlayersScreenViewController {
     
+    func fetchData() {
+        generalService.fetchPlayers().bind(to: tableView.rx.items(cellIdentifier: PlayerCell.reuseIdentifier, cellType: PlayerCell.self)){
+            index, player, cell in
+            
+            cell.setupData(player: player)
+            
+        }.disposed(by: disposeBag)
+    }
+}
+
+private extension PlayersScreenViewController {
+    
     func bindUI() {
         bindViewModel()
-        bindTableView()
+//        bindTableView()
     }
     
     func bindViewModel() {

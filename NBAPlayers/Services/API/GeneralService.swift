@@ -28,8 +28,9 @@ extension GeneralService {
         
         provider.rx.request(.fetchPlayers(page: 29, limit: 100))
             .filterSuccessfulStatusAndRedirectCodes()
-            .map([ServerPlayer].self)
-            .map { PlayerMapper().toLocal(list: $0) }
+            .map(ServerResponse<[ServerPlayer]>.self)
+//            .map(ServerPlayer.self)
+            .map { PlayerMapper().toLocal(list: $0.data) }
             .asObservable()
         
     }
