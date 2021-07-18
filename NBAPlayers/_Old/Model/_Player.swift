@@ -16,7 +16,7 @@ struct _Player: Decodable {
     let lastName: String
 
     let position: String
-    let team: Team
+    let team: _Team
     
     let heightFeet: Int?
     let heightInches: Int?

@@ -12,7 +12,7 @@ struct ServerPlayer: Decodable {
     let lastName: String?
 
     let position: String?
-    let team: Team?
+    let team: ServerTeam?
     
     let heightFeet: Int?
     let heightInches: Int?

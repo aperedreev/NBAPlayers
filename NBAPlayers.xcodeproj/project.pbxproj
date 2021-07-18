@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4ECC5F017DC3A26D9AADB47B /* Pods_NBAPlayers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED5897C90B43457C97A625F /* Pods_NBAPlayers.framework */; };
 		5C0A1F3125DB2D25000AAA25 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */; };
-		5C58827A25C629F0005392C1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58827925C629F0005392C1 /* Game.swift */; };
+		5C58827A25C629F0005392C1 /* _Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58827925C629F0005392C1 /* _Game.swift */; };
 		5C58829B25C84F3B005392C1 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */; };
 		5C61813425E439E400D34F92 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61813325E439E400D34F92 /* TeamsViewController.swift */; };
 		5C61813C25E43EB600D34F92 /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61813B25E43EB600D34F92 /* TeamCollectionViewCell.swift */; };
@@ -21,7 +21,7 @@
 		5C63F3E825C06400001260D9 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3E725C063FF001260D9 /* PlayersViewController.swift */; };
 		5C63F3ED25C06A56001260D9 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */; };
 		5C63F3F225C081E7001260D9 /* _Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F125C081E6001260D9 /* _Player.swift */; };
-		5C63F3F725C09537001260D9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F625C09537001260D9 /* Team.swift */; };
+		5C63F3F725C09537001260D9 /* _Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3F625C09537001260D9 /* _Team.swift */; };
 		5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */; };
 		5C63F40225C19141001260D9 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63F40125C19141001260D9 /* ApiClient.swift */; };
 		5CC2E4BA25D4006100CA4EF5 /* PushControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2E4B925D4006100CA4EF5 /* PushControllerUtils.swift */; };
@@ -48,6 +48,12 @@
 		FD600A3A26A37934003EF022 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A2726A37934003EF022 /* Player.swift */; };
 		FD600A3C26A37AE1003EF022 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A3B26A37AE1003EF022 /* Consts.swift */; };
 		FD600A3F26A38FF9003EF022 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A3E26A38FF9003EF022 /* PlayerCell.swift */; };
+		FD600A4126A3BAF6003EF022 /* ServerTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A4026A3BAF6003EF022 /* ServerTeam.swift */; };
+		FD600A4326A3BB06003EF022 /* ServerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A4226A3BB06003EF022 /* ServerGame.swift */; };
+		FD600A4526A3BB10003EF022 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A4426A3BB10003EF022 /* Team.swift */; };
+		FD600A4726A3BB1C003EF022 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A4626A3BB1C003EF022 /* Game.swift */; };
+		FD600A4926A3BD17003EF022 /* TeamMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A4826A3BD17003EF022 /* TeamMapper.swift */; };
+		FD600A4B26A3BD22003EF022 /* GameMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A4A26A3BD22003EF022 /* GameMapper.swift */; };
 		FDAFC6022646E31B007271B9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6012646E31B007271B9 /* NetworkService.swift */; };
 		FDAFC6042646E497007271B9 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6032646E497007271B9 /* NetworkDataFetcher.swift */; };
 		FDAFC6062647380E007271B9 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6052647380E007271B9 /* DataFetcherService.swift */; };
@@ -75,7 +81,7 @@
 /* Begin PBXFileReference section */
 		07DB279B5438D208FEED7010 /* Pods-NBAPlayers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBAPlayers.release.xcconfig"; path = "Target Support Files/Pods-NBAPlayers/Pods-NBAPlayers.release.xcconfig"; sourceTree = "<group>"; };
 		5C0A1F3025DB2D25000AAA25 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
-		5C58827925C629F0005392C1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5C58827925C629F0005392C1 /* _Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Game.swift; sourceTree = "<group>"; };
 		5C58829A25C84F3B005392C1 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		5C61813325E439E400D34F92 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		5C61813B25E43EB600D34F92 /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -93,7 +99,7 @@
 		5C63F3E725C063FF001260D9 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		5C63F3EC25C06A55001260D9 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
 		5C63F3F125C081E6001260D9 /* _Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Player.swift; sourceTree = "<group>"; };
-		5C63F3F625C09537001260D9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		5C63F3F625C09537001260D9 /* _Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Team.swift; sourceTree = "<group>"; };
 		5C63F3FB25C096AD001260D9 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 		5C63F40125C19141001260D9 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		5CC2E4B925D4006100CA4EF5 /* PushControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushControllerUtils.swift; sourceTree = "<group>"; };
@@ -122,6 +128,12 @@
 		FD600A2726A37934003EF022 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FD600A3B26A37AE1003EF022 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		FD600A3E26A38FF9003EF022 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		FD600A4026A3BAF6003EF022 /* ServerTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTeam.swift; sourceTree = "<group>"; };
+		FD600A4226A3BB06003EF022 /* ServerGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerGame.swift; sourceTree = "<group>"; };
+		FD600A4426A3BB10003EF022 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		FD600A4626A3BB1C003EF022 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FD600A4826A3BD17003EF022 /* TeamMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMapper.swift; sourceTree = "<group>"; };
+		FD600A4A26A3BD22003EF022 /* GameMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapper.swift; sourceTree = "<group>"; };
 		FDAFC6012646E31B007271B9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FDAFC6032646E497007271B9 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		FDAFC6052647380E007271B9 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
@@ -167,8 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				5C63F3F125C081E6001260D9 /* _Player.swift */,
-				5C63F3F625C09537001260D9 /* Team.swift */,
-				5C58827925C629F0005392C1 /* Game.swift */,
+				5C63F3F625C09537001260D9 /* _Team.swift */,
+				5C58827925C629F0005392C1 /* _Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +334,8 @@
 			children = (
 				FD600A0F26A37934003EF022 /* BaseMapper */,
 				FD600A1126A37934003EF022 /* PlayerMapper.swift */,
+				FD600A4826A3BD17003EF022 /* TeamMapper.swift */,
+				FD600A4A26A3BD22003EF022 /* GameMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -404,6 +418,8 @@
 			children = (
 				FD600A2426A37934003EF022 /* ServerResponse.swift */,
 				FD600A2526A37934003EF022 /* ServerPlayer.swift */,
+				FD600A4026A3BAF6003EF022 /* ServerTeam.swift */,
+				FD600A4226A3BB06003EF022 /* ServerGame.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -412,6 +428,8 @@
 			isa = PBXGroup;
 			children = (
 				FD600A2726A37934003EF022 /* Player.swift */,
+				FD600A4426A3BB10003EF022 /* Team.swift */,
+				FD600A4626A3BB1C003EF022 /* Game.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -684,14 +702,17 @@
 				5C0A1F3125DB2D25000AAA25 /* PlayerTableViewCell.swift in Sources */,
 				FD600A3C26A37AE1003EF022 /* Consts.swift in Sources */,
 				FD600A3226A37934003EF022 /* PlayersScreenViewModel.swift in Sources */,
-				5C63F3F725C09537001260D9 /* Team.swift in Sources */,
+				5C63F3F725C09537001260D9 /* _Team.swift in Sources */,
 				FD600A3726A37934003EF022 /* PlayersScreenViewController.swift in Sources */,
 				FD600A3526A37934003EF022 /* PlayersScreenBuilder.swift in Sources */,
 				FD600A2B26A37934003EF022 /* MasterProvider.swift in Sources */,
 				5CC2E4BA25D4006100CA4EF5 /* PushControllerUtils.swift in Sources */,
+				FD600A4926A3BD17003EF022 /* TeamMapper.swift in Sources */,
 				5CCCCB2A25D2DF24008AB927 /* GameDetailsViewController.swift in Sources */,
-				5C58827A25C629F0005392C1 /* Game.swift in Sources */,
+				5C58827A25C629F0005392C1 /* _Game.swift in Sources */,
 				FD600A2F26A37934003EF022 /* DashboardFlow.swift in Sources */,
+				FD600A4B26A3BD22003EF022 /* GameMapper.swift in Sources */,
+				FD600A4126A3BAF6003EF022 /* ServerTeam.swift in Sources */,
 				FDAFC6022646E31B007271B9 /* NetworkService.swift in Sources */,
 				FDAFC6042646E497007271B9 /* NetworkDataFetcher.swift in Sources */,
 				5C61813C25E43EB600D34F92 /* TeamCollectionViewCell.swift in Sources */,
@@ -702,6 +723,7 @@
 				5C63F3A225BF32AE001260D9 /* AppDelegate.swift in Sources */,
 				5C63F40225C19141001260D9 /* ApiClient.swift in Sources */,
 				5CD8489725C32149005B5CC3 /* GamesViewController.swift in Sources */,
+				FD600A4526A3BB10003EF022 /* Team.swift in Sources */,
 				FD600A3426A37934003EF022 /* PlayersScreenDataSource.swift in Sources */,
 				FD600A3926A37934003EF022 /* ServerPlayer.swift in Sources */,
 				FD600A2D26A37934003EF022 /* PlayerMapper.swift in Sources */,
@@ -710,6 +732,7 @@
 				5C58829B25C84F3B005392C1 /* GameTableViewCell.swift in Sources */,
 				5C63F3ED25C06A56001260D9 /* PlayerDetailsViewController.swift in Sources */,
 				FD600A3326A37934003EF022 /* PlayersScreenViewModelProtocols.swift in Sources */,
+				FD600A4326A3BB06003EF022 /* ServerGame.swift in Sources */,
 				FDAFC60826473D3E007271B9 /* API.swift in Sources */,
 				5C63F3F225C081E7001260D9 /* _Player.swift in Sources */,
 				5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */,
@@ -717,6 +740,7 @@
 				FD600A3826A37934003EF022 /* ServerResponse.swift in Sources */,
 				FDAFC6062647380E007271B9 /* DataFetcherService.swift in Sources */,
 				5C61813425E439E400D34F92 /* TeamsViewController.swift in Sources */,
+				FD600A4726A3BB1C003EF022 /* Game.swift in Sources */,
 				FD600A2926A37934003EF022 /* GeneralAPI.swift in Sources */,
 				FD600A3126A37934003EF022 /* AppStep.swift in Sources */,
 				FD600A2A26A37934003EF022 /* GeneralService.swift in Sources */,

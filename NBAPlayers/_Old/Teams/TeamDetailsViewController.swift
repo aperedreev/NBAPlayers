@@ -10,7 +10,7 @@ import UIKit
 class TeamDetailsViewController: UIViewController {
 
     // MARK: - Properties
-    var team: Team?
+    var team: _Team?
     
     // MARK: - IBOutlets
     @IBOutlet weak var cityLabel: UILabel!

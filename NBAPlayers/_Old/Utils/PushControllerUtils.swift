@@ -17,7 +17,7 @@ func showPlayerDetailsViewController(from controller: UIViewController, with pla
     controller.navigationController?.pushViewController(viewController, animated: true)
 }
 
-func showTeamDetailsViewController(from controller: UIViewController, with team: Team) {
+func showTeamDetailsViewController(from controller: UIViewController, with team: _Team) {
     let storyboard = UIStoryboard(name: "Main", bundle: .main)
     let viewController = storyboard.instantiateViewController(identifier: "TeamDetailsViewController") as! TeamDetailsViewController
     
@@ -26,7 +26,7 @@ func showTeamDetailsViewController(from controller: UIViewController, with team:
     controller.navigationController?.pushViewController(viewController, animated: true)
 }
 
-func showGameDetailsViewController(from controller: UIViewController, with game: Game) {
+func showGameDetailsViewController(from controller: UIViewController, with game: _Game) {
     let storyboard = UIStoryboard(name: "Main", bundle: .main)
     let viewController = storyboard.instantiateViewController(identifier: "GameDetailsViewController") as! GameDetailsViewController
     

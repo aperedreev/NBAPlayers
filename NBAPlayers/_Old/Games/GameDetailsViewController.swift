@@ -10,7 +10,7 @@ import UIKit
 class GameDetailsViewController: UIViewController {
 
     //MARK: - Properties
-    var game: Game?
+    var game: _Game?
     
     // MARK: - IBOutlets
     @IBOutlet weak var homeTeamLogoImageView: UIImageView!

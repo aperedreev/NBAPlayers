@@ -94,7 +94,7 @@ private extension PlayersScreenViewController {
 private extension PlayersScreenViewController {
     
     func fetchData() {
-        generalService.fetchPlayers().bind(to: tableView.rx.items(cellIdentifier: PlayerCell.reuseIdentifier, cellType: PlayerCell.self)){
+        generalService.fetchPlayers(page: 29, limit: 100).bind(to: tableView.rx.items(cellIdentifier: PlayerCell.reuseIdentifier, cellType: PlayerCell.self)){
             index, player, cell in
             
             cell.setupData(player: player)

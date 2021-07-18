@@ -10,7 +10,7 @@ import UIKit
 class TeamCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
-    var team: Team?
+    var team: _Team?
     
     // MARK: - IBOutlets
     @IBOutlet weak var teamLogoImageView: UIImageView!

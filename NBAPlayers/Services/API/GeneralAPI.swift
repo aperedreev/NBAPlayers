@@ -10,6 +10,8 @@ import Moya
 
 enum GeneralAPI {
     case fetchPlayers(page: Int, limit: Int)
+    case fetchTeams
+    case fetchGames(page: Int, limit: Int)
 }
 
 extension GeneralAPI: TargetType {
@@ -21,12 +23,16 @@ extension GeneralAPI: TargetType {
         switch self {
         case .fetchPlayers:
             return "/api/v1/players"
+        case .fetchTeams:
+            return "/api/v1/teams"
+        case .fetchGames:
+            return "/api/v1/games"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .fetchPlayers:
+        case .fetchPlayers, .fetchTeams, .fetchGames:
             return .get
         }
     }
@@ -44,6 +50,13 @@ extension GeneralAPI: TargetType {
             params["per_page"] = limit
             
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
+        case .fetchTeams:
+            return .requestPlain
+        case let .fetchGames(page: page, limit: limit):
+            params["page"] = page
+            params["per_page"] = limit
+        
+        return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }
     }
     

@@ -1,30 +1,24 @@
 //
-//  Game.swift
+//  ServerGame.swift
 //  NBAPlayers
 //
-//  Created by A L E X on 31.01.2021.
+//  Created by Alex Peredreev on 18.07.2021.
 //
 
 import Foundation
 
-struct GamesResponse: Decodable {
-    let data: [Game]
-}
-
-struct Game: Decodable {
-    let homeTeam: Team
-    let awayTeam: Team
+struct ServerGame: Decodable {
+    let homeTeam: ServerTeam?
+    let awayTeam: ServerTeam?
 
     let homeTeamScore: Int?
     let awayTeamScore: Int?
-    let dateGet:       String
-    var date:          String {
-        String(dateGet.split(separator: "T")[0])
-    }
+    let dateGet: String?
+    
     let season: Int?
     let period: Int?
-    let status: String
-    let time:   String?
+    let status: String?
+    let time: String?
     
     enum CodingKeys: String, CodingKey {
         case homeTeam      = "home_team"
@@ -38,5 +32,3 @@ struct Game: Decodable {
         case time
     }
 }
-
-

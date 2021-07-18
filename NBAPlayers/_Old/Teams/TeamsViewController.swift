@@ -10,7 +10,7 @@ import UIKit
 class TeamsViewController: UIViewController {
     
     // MARK: - Properties
-    var teams: [Team] = []
+    var teams: [_Team] = []
     let apiClient: ApiClient = ApiClientImpl()
     
     // MARK: - IBOutlets

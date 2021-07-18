@@ -10,7 +10,7 @@ import UIKit
 class GamesViewController: UIViewController {
 
     // MARK: - Properties
-    var games: [Game] = []
+    var games: [_Game] = []
     let apiClient: ApiClient = ApiClientImpl()
     
     // MARK: - IBOutlets

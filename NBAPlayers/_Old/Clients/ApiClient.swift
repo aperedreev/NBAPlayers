@@ -14,9 +14,9 @@ enum _ApiError: Error {
 protocol ApiClient {
     func getPlayers(completion: @escaping (Result<[_Player], Error>) -> ())
     
-    func getTeams(completion: @escaping (Result<[Team], Error>) -> ())
+    func getTeams(completion: @escaping (Result<[_Team], Error>) -> ())
     
-    func getGames(completion: @escaping (Result<[Game], Error>) -> ())
+    func getGames(completion: @escaping (Result<[_Game], Error>) -> ())
 }
 
 class ApiClientImpl: ApiClient {
@@ -45,7 +45,7 @@ class ApiClientImpl: ApiClient {
         dataTask.resume()
     }
     
-    func getTeams(completion: @escaping (Result<[Team], Error>) -> ()) {
+    func getTeams(completion: @escaping (Result<[_Team], Error>) -> ()) {
         let session = URLSession.shared
         
         guard let url = URL(string: "https://www.balldontlie.io/api/v1/teams") else { return }
@@ -70,7 +70,7 @@ class ApiClientImpl: ApiClient {
         dataTask.resume()
     }
     
-    func getGames(completion: @escaping (Result<[Game], Error>) -> ()) {
+    func getGames(completion: @escaping (Result<[_Game], Error>) -> ()) {
         let session = URLSession.shared
         
         guard let url = URL(string: "https://www.balldontlie.io/api/v1/games?page=1230&per_page=40") else { return }

@@ -24,14 +24,32 @@ struct GeneralService {
 
 extension GeneralService {
     
-    func fetchPlayers() -> Observable<[Player]> {
+    func fetchPlayers(page: Int, limit: Int) -> Observable<[Player]> {
         
-        provider.rx.request(.fetchPlayers(page: 29, limit: 100))
+        provider.rx.request(.fetchPlayers(page: page, limit: limit))
             .filterSuccessfulStatusAndRedirectCodes()
             .map(ServerResponse<[ServerPlayer]>.self)
-//            .map(ServerPlayer.self)
             .map { PlayerMapper().toLocal(list: $0.data) }
+            .asObservable()
+    }
+    
+    func fetchTeams() -> Observable<[Team]> {
+        
+        provider.rx.request(.fetchTeams)
+            .filterSuccessfulStatusAndRedirectCodes()
+            .map(ServerResponse<[ServerTeam]>.self)
+            .map { TeamMapper().toLocal(list: $0.data) }
+            .asObservable()
+    }
+    
+    func fetchGames(page: Int, limit: Int) -> Observable<[Game]> {
+        
+        provider.rx.request(.fetchGames(page: page, limit: limit))
+            .filterSuccessfulStatusAndRedirectCodes()
+            .map(ServerResponse<[ServerGame]>.self)
+            .map { GameMapper().toLocal(list: $0.data) }
             .asObservable()
         
     }
+    
 }

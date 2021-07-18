@@ -20,12 +20,12 @@ class DataFetcherService {
         dataFetcher.fetchGenericJSONData(urlString: urlPlayers, response: completion)
     }
     
-    func fetchTeams(completion: @escaping (Result<[Team]?, Error>) -> ()) {
+    func fetchTeams(completion: @escaping (Result<[_Team]?, Error>) -> ()) {
         let urlTeams = "https://www.balldontlie.io/api/v1/teams"
         dataFetcher.fetchGenericJSONData(urlString: urlTeams, response: completion)
     }
     
-    func fetchGames(completion: @escaping (Result<[Game]?, Error>) -> ()) {
+    func fetchGames(completion: @escaping (Result<[_Game]?, Error>) -> ()) {
         let urlGames = "https://www.balldontlie.io/api/v1/games?page=1230&per_page=40"
         dataFetcher.fetchGenericJSONData(urlString: urlGames, response: completion)
     }
