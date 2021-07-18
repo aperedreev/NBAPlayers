@@ -25,8 +25,6 @@ final class PlayersScreenViewController: UIViewController, Reusable {
     
     private let onAppear = PublishRelay<Void>()
     
-    // MARK: - Outlets
-    
     private var tableView: UITableView!
     
     // MARK: - Lifecycle

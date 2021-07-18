@@ -54,6 +54,11 @@
 		FD600A4726A3BB1C003EF022 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A4626A3BB1C003EF022 /* Game.swift */; };
 		FD600A4926A3BD17003EF022 /* TeamMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A4826A3BD17003EF022 /* TeamMapper.swift */; };
 		FD600A4B26A3BD22003EF022 /* GameMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A4A26A3BD22003EF022 /* GameMapper.swift */; };
+		FD600A4F26A43E78003EF022 /* PlayerDetailsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A4E26A43E78003EF022 /* PlayerDetailsScreenViewModel.swift */; };
+		FD600A5126A43E90003EF022 /* PlayerDetailsScreenViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A5026A43E90003EF022 /* PlayerDetailsScreenViewModelProtocols.swift */; };
+		FD600A5426A43EBD003EF022 /* PlayerDetailsScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A5326A43EBD003EF022 /* PlayerDetailsScreenDataSource.swift */; };
+		FD600A5726A43F20003EF022 /* PlayerDetailsScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A5626A43F20003EF022 /* PlayerDetailsScreenBuilder.swift */; };
+		FD600A5B26A43FA8003EF022 /* PlayerDetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD600A5A26A43FA8003EF022 /* PlayerDetailsScreenViewController.swift */; };
 		FDAFC6022646E31B007271B9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6012646E31B007271B9 /* NetworkService.swift */; };
 		FDAFC6042646E497007271B9 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6032646E497007271B9 /* NetworkDataFetcher.swift */; };
 		FDAFC6062647380E007271B9 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFC6052647380E007271B9 /* DataFetcherService.swift */; };
@@ -134,6 +139,11 @@
 		FD600A4626A3BB1C003EF022 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FD600A4826A3BD17003EF022 /* TeamMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMapper.swift; sourceTree = "<group>"; };
 		FD600A4A26A3BD22003EF022 /* GameMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapper.swift; sourceTree = "<group>"; };
+		FD600A4E26A43E78003EF022 /* PlayerDetailsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsScreenViewModel.swift; sourceTree = "<group>"; };
+		FD600A5026A43E90003EF022 /* PlayerDetailsScreenViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsScreenViewModelProtocols.swift; sourceTree = "<group>"; };
+		FD600A5326A43EBD003EF022 /* PlayerDetailsScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsScreenDataSource.swift; sourceTree = "<group>"; };
+		FD600A5626A43F20003EF022 /* PlayerDetailsScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsScreenBuilder.swift; sourceTree = "<group>"; };
+		FD600A5A26A43FA8003EF022 /* PlayerDetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsScreenViewController.swift; sourceTree = "<group>"; };
 		FDAFC6012646E31B007271B9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FDAFC6032646E497007271B9 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		FDAFC6052647380E007271B9 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
@@ -362,6 +372,7 @@
 		FD600A1726A37934003EF022 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FD600A4C26A43DB2003EF022 /* PlayerDetailsScreen */,
 				FD600A1826A37934003EF022 /* PlayersScreen */,
 			);
 			path = Modules;
@@ -372,8 +383,8 @@
 			children = (
 				FD600A1926A37934003EF022 /* ViewModel */,
 				FD600A1C26A37934003EF022 /* DataSource */,
-				FD600A1E26A37934003EF022 /* PlayersScreenBuilder.swift */,
 				FD600A1F26A37934003EF022 /* View */,
+				FD600A1E26A37934003EF022 /* PlayersScreenBuilder.swift */,
 			);
 			path = PlayersScreen;
 			sourceTree = "<group>";
@@ -440,6 +451,42 @@
 				FD600A3E26A38FF9003EF022 /* PlayerCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		FD600A4C26A43DB2003EF022 /* PlayerDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A4D26A43E58003EF022 /* ViewModel */,
+				FD600A5226A43EA0003EF022 /* DataSource */,
+				FD600A5526A43F02003EF022 /* View */,
+				FD600A5626A43F20003EF022 /* PlayerDetailsScreenBuilder.swift */,
+			);
+			path = PlayerDetailsScreen;
+			sourceTree = "<group>";
+		};
+		FD600A4D26A43E58003EF022 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A4E26A43E78003EF022 /* PlayerDetailsScreenViewModel.swift */,
+				FD600A5026A43E90003EF022 /* PlayerDetailsScreenViewModelProtocols.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FD600A5226A43EA0003EF022 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A5326A43EBD003EF022 /* PlayerDetailsScreenDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		FD600A5526A43F02003EF022 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD600A5A26A43FA8003EF022 /* PlayerDetailsScreenViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FDAFC5FA2646B912007271B9 /* Players */ = {
@@ -730,16 +777,21 @@
 				FD600A3F26A38FF9003EF022 /* PlayerCell.swift in Sources */,
 				FD600A3A26A37934003EF022 /* Player.swift in Sources */,
 				5C58829B25C84F3B005392C1 /* GameTableViewCell.swift in Sources */,
+				FD600A4F26A43E78003EF022 /* PlayerDetailsScreenViewModel.swift in Sources */,
 				5C63F3ED25C06A56001260D9 /* PlayerDetailsViewController.swift in Sources */,
 				FD600A3326A37934003EF022 /* PlayersScreenViewModelProtocols.swift in Sources */,
 				FD600A4326A3BB06003EF022 /* ServerGame.swift in Sources */,
+				FD600A5426A43EBD003EF022 /* PlayerDetailsScreenDataSource.swift in Sources */,
+				FD600A5726A43F20003EF022 /* PlayerDetailsScreenBuilder.swift in Sources */,
 				FDAFC60826473D3E007271B9 /* API.swift in Sources */,
 				5C63F3F225C081E7001260D9 /* _Player.swift in Sources */,
 				5C63F3FC25C096AD001260D9 /* TeamDetailsViewController.swift in Sources */,
 				FD600A2E26A37934003EF022 /* PlayersFlow.swift in Sources */,
+				FD600A5B26A43FA8003EF022 /* PlayerDetailsScreenViewController.swift in Sources */,
 				FD600A3826A37934003EF022 /* ServerResponse.swift in Sources */,
 				FDAFC6062647380E007271B9 /* DataFetcherService.swift in Sources */,
 				5C61813425E439E400D34F92 /* TeamsViewController.swift in Sources */,
+				FD600A5126A43E90003EF022 /* PlayerDetailsScreenViewModelProtocols.swift in Sources */,
 				FD600A4726A3BB1C003EF022 /* Game.swift in Sources */,
 				FD600A2926A37934003EF022 /* GeneralAPI.swift in Sources */,
 				FD600A3126A37934003EF022 /* AppStep.swift in Sources */,
